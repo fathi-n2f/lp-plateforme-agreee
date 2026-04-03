@@ -1,0 +1,14 @@
+{
+  "buildCommand": null,
+  "outputDirectory": "public",
+  "routes": [
+    {
+      "src": "/fr/plateforme-agreee-facturation-electronique",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
+    }
+  ]
+}
