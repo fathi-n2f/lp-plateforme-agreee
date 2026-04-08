@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facturation Électronique 2026 — Obligation & Conformité | N2F</title>
+  <meta name="description" content="La réception des e-factures devient obligatoire en septembre 2026. N2F est plateforme agréée DGFiP depuis juillet 2025. Vérifiez votre conformité dès maintenant.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://content.n2f.com/fr/facturation-2026/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Facturation Électronique 2026 — Obligation & Conformité | N2F">
+  <meta property="og:description" content="Toutes les entreprises françaises devront recevoir des e-factures via une PDP dès septembre 2026. N2F est certifiée PDP DGFiP depuis juillet 2025.">
+  <meta property="og:url" content="https://content.n2f.com/fr/facturation-2026/">
+  <meta property="og:image" content="./img/hero-ap-dashboard-pa-badge.png">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="N2F">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Facturation Électronique 2026 — Obligation & Conformité | N2F">
+  <meta name="twitter:description" content="Obligation e-factures septembre 2026. N2F PDP certifiée DGFiP. OCR + IA, intégrations ERP natives, déploiement 6-8 semaines.">
+  <meta name="twitter:image" content="./img/hero-ap-dashboard-pa-badge.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="./img/hero-ap-dashboard-pa-badge.png" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- GTM via sGTM -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://tag.n2f.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W2XTKMF');</script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --text: #2E2A27; --accent: #EE5700; --accent-hover: #C94A00; --accent-light: #FFF3EC;
+      --bg: #FFFCFA; --white: #FFFFFF; --dark: #2E2A27; --dark-lighter: #433C37;
+      --gray: #6B6560; --gray-light: #A39E99; --green: #15A66C; --green-light: #EDF8F3;
+      --red: #DC2626; --red-light: #FEF2F2;
+      --font: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max-w: 1120px; --radius: 12px; --radius-sm: 8px;
+    }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.6; font-size: 16px; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 100%; max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
+    .text-center { text-align: center; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; font-family: var(--font); font-weight: 600; font-size: 16px; padding: 14px 32px; border-radius: var(--radius-sm); border: none; cursor: pointer; transition: all 0.25s ease; text-decoration: none; min-height: 48px; }
+    .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 2px 8px rgba(238,87,0,0.3); }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(238,87,0,0.4); }
+    .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.4); }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: var(--white); }
+    .btn-ghost { background: transparent; color: var(--accent); border: 2px solid var(--accent); }
+    .btn-ghost:hover { background: var(--accent-light); }
+    .section { padding: 56px 0; }
+    .section-light { background: var(--bg); }
+    .section-white { background: var(--white); }
+    .section-accent { background: var(--accent-light); }
+    .section-title { font-size: 28px; font-weight: 700; line-height: 1.2; margin-bottom: 16px; }
+    .section-subtitle { font-size: 17px; color: var(--gray); line-height: 1.6; margin-bottom: 32px; max-width: 640px; }
+
+    /* ======================== NAV ======================== */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; background: rgba(46,42,39,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 12px 0; transition: box-shadow 0.3s; }
+    .nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.2); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 28px; width: auto; filter: brightness(0) invert(1); }
+    .nav .btn { font-size: 14px; padding: 10px 24px; min-height: 40px; }
+
+    /* ======================== HERO ======================== */
+    .hero { background: linear-gradient(170deg, var(--dark) 0%, var(--dark-lighter) 60%, #3a3530 100%); color: var(--white); padding: 100px 0 0; overflow: hidden; position: relative; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 20% 50%, rgba(238,87,0,0.06) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(238,87,0,0.04) 0%, transparent 50%); pointer-events: none; }
+    .hero-inner { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 2; }
+    .hero-text { width: 100%; max-width: 740px; margin: 0 auto; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(220,38,38,0.15); border: 1px solid rgba(220,38,38,0.4); border-radius: 100px; padding: 8px 18px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.95); margin-bottom: 20px; }
+    .hero-badge .countdown { color: #ff6b6b; font-weight: 800; }
+    .hero h1 { font-size: 28px; font-weight: 800; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.03em; }
+    .hero h1 .accent { color: var(--accent); }
+    .hero-sub { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.7); margin-bottom: 24px; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .hero-sub strong { color: rgba(255,255,255,0.95); font-weight: 600; }
+    .hero-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 16px; }
+    .hero-trust-line { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 32px; }
+    .hero-trust-line span { display: flex; align-items: center; gap: 5px; }
+    .hero-visual { width: 100%; max-width: 860px; margin: 0 auto; position: relative; }
+    .hero-visual img { width: 100%; display: block; border-radius: 12px 12px 0 0; filter: drop-shadow(0 12px 48px rgba(0,0,0,0.4)); }
+    .hero-callout { position: absolute; z-index: 10; background: var(--white); border-radius: 12px; padding: 10px 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.2); display: flex; align-items: center; gap: 10px; white-space: nowrap; color: var(--text); font-size: 13px; }
+    .hero-callout-num { font-size: 20px; font-weight: 800; line-height: 1; }
+    .hero-callout--1 { top: 10%; left: -10px; }
+    .hero-callout--2 { top: 40%; right: -10px; }
+    .hero-callout--3 { bottom: 20%; left: 5%; }
+
+    /* ======================== LOGOS ======================== */
+    .logos { padding: 32px 0; background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.05); }
+    .logos-label { font-size: 13px; font-weight: 600; color: var(--gray-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px; }
+    .logos-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 24px; }
+    .logos-grid img { height: 28px; width: auto; opacity: 0.5; filter: grayscale(1); transition: all 0.3s; }
+    .logos-grid img:hover { opacity: 1; filter: grayscale(0); }
+
+    /* ======================== TIMELINE ======================== */
+    .timeline-grid { display: grid; grid-template-columns: 1fr; gap: 0; position: relative; }
+    .timeline-card { background: var(--white); border-radius: var(--radius); padding: 24px 20px; border: 1px solid rgba(0,0,0,0.06); position: relative; transition: transform 0.2s, box-shadow 0.2s; }
+    .timeline-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
+    .timeline-card.critical { border: 2px solid var(--accent); background: var(--accent-light); }
+    .timeline-card.critical .timeline-date { color: var(--accent); }
+    .timeline-date { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--gray-light); margin-bottom: 8px; }
+    .timeline-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .timeline-card p { font-size: 14px; color: var(--gray); line-height: 1.5; }
+    .timeline-connector { display: none; }
+
+    /* ======================== CHECKLIST ======================== */
+    .checklist-grid { display: grid; grid-template-columns: 1fr; gap: 12px; max-width: 720px; margin: 0 auto; }
+    .check-item { display: flex; align-items: center; gap: 14px; background: var(--white); border-radius: var(--radius-sm); padding: 16px 20px; border: 1px solid rgba(0,0,0,0.06); }
+    .check-icon { width: 32px; height: 32px; min-width: 32px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; }
+    .check-item span { font-size: 15px; font-weight: 500; }
+    .checklist-warning { max-width: 720px; margin: 20px auto 0; background: var(--red-light); border: 1px solid rgba(220,38,38,0.2); border-radius: var(--radius-sm); padding: 16px 20px; font-size: 14px; color: var(--red); line-height: 1.6; text-align: center; }
+
+    /* ======================== FEATURE SHOWCASE BLOCKS ======================== */
+    .features-section { padding: 0; }
+    .feature-showcase { padding: 48px 0; }
+    .feature-showcase:nth-child(odd) { background: var(--white); }
+    .feature-showcase:nth-child(even) { background: var(--bg); }
+    .feature-block { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+    .feature-block-img { border-radius: var(--radius); overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.1); aspect-ratio: 4 / 3; background: #f5f3f0; display: flex; align-items: center; justify-content: center; }
+    .feature-block-img img { width: 100%; height: 100%; object-fit: contain; display: block; padding: 8px; }
+    .feature-block-text h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; color: var(--text); }
+    .feature-block-text > p { font-size: 15px; color: var(--gray); line-height: 1.7; margin-bottom: 16px; }
+    .feature-bullets { list-style: none; padding: 0; }
+    .feature-bullets li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text); padding: 6px 0; }
+    .feature-bullets li::before { content: '\2713'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+
+    /* ======================== SANCTIONS ======================== */
+    .sanctions-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .sanction-card { background: var(--white); border-radius: var(--radius); padding: 24px 20px; border-left: 4px solid var(--red); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .sanction-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--red); }
+    .sanction-card p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+
+    /* ======================== DIFFERENTIATORS ======================== */
+    .diff-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .diff-card { background: var(--white); border-radius: var(--radius); padding: 24px 20px; border-left: 4px solid var(--accent); box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .diff-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--dark); }
+    .diff-card p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+
+    /* ======================== SOCIAL PROOF ======================== */
+    .trust-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 24px; }
+    .trust-badge { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .trust-badge img { height: 40px; width: auto; }
+    .trust-badge span { font-size: 11px; color: var(--gray-light); }
+    .testimonial { background: var(--white); border-radius: var(--radius); padding: 32px 24px; border: 1px solid rgba(0,0,0,0.06); max-width: 640px; margin: 0 auto 24px; }
+    .testimonial blockquote { font-size: 16px; font-style: italic; line-height: 1.7; color: var(--dark); margin-bottom: 16px; }
+    .testimonial cite { font-size: 14px; font-style: normal; color: var(--gray); font-weight: 600; }
+
+    /* ======================== FAQ ======================== */
+    .faq-list { max-width: 720px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid rgba(0,0,0,0.08); }
+    .faq-q { width: 100%; background: none; border: none; padding: 20px 0; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-family: var(--font); font-size: 16px; font-weight: 600; color: var(--text); text-align: left; gap: 16px; }
+    .faq-q::after { content: '+'; font-size: 24px; font-weight: 300; color: var(--accent); transition: transform 0.3s; flex-shrink: 0; }
+    .faq-q.active::after { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-a-inner { padding: 0 0 20px; font-size: 15px; color: var(--gray); line-height: 1.7; }
+
+    /* ======================== FORM ======================== */
+    .form-section { background: linear-gradient(170deg, var(--dark) 0%, var(--dark-lighter) 100%); color: var(--white); padding: 64px 0; }
+    .form-wrapper { max-width: 540px; margin: 0 auto; background: var(--white); border-radius: var(--radius); padding: 32px 24px; color: var(--text); }
+    .form-wrapper h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; text-align: center; }
+    .form-wrapper p { font-size: 14px; color: var(--gray); text-align: center; margin-bottom: 20px; }
+
+    /* ======================== STICKY CTA ======================== */
+    .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 40; background: var(--dark); padding: 10px 16px; box-shadow: 0 -4px 20px rgba(0,0,0,0.2); }
+    .sticky-cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: var(--max-w); margin: 0 auto; }
+    .sticky-cta-text { font-size: 13px; color: rgba(255,255,255,0.7); }
+    .sticky-cta-text strong { color: #ff6b6b; font-weight: 700; }
+    .sticky-cta .btn { font-size: 13px; padding: 10px 20px; min-height: 38px; white-space: nowrap; }
+
+    /* ======================== FOOTER ======================== */
+    .footer { background: var(--dark); color: rgba(255,255,255,0.5); padding: 40px 0 24px; font-size: 13px; }
+    .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+    .footer-logo img { height: 24px; filter: brightness(0) invert(1); margin-bottom: 4px; }
+    .footer a { color: var(--accent); text-decoration: none; }
+    .footer-cta { font-size: 15px; color: rgba(255,255,255,0.7); margin-bottom: 8px; }
+    .footer-cta a { color: var(--accent); font-weight: 600; font-size: 17px; }
+
+    /* ======================== RESPONSIVE ======================== */
+    @media (min-width: 640px) {
+      .hero h1 { font-size: 36px; }
+      .timeline-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .checklist-grid { grid-template-columns: repeat(2, 1fr); }
+      .sanctions-grid { grid-template-columns: repeat(2, 1fr); }
+      .diff-grid { grid-template-columns: repeat(2, 1fr); }
+      .section-title { font-size: 32px; }
+    }
+    @media (min-width: 768px) {
+      .feature-block { grid-template-columns: 1fr 1fr; }
+      .feature-block.reverse .feature-block-img { order: 2; }
+      .feature-block.reverse .feature-block-text { order: 1; }
+    }
+    @media (min-width: 900px) {
+      .hero h1 { font-size: 42px; }
+      .hero-sub { font-size: 17px; }
+      .timeline-grid { grid-template-columns: repeat(4, 1fr); gap: 0; }
+      .timeline-connector { display: block; position: absolute; top: 50%; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gray-light) 0%, var(--gray-light) 60%, var(--accent) 60%, var(--accent) 100%); z-index: 0; transform: translateY(-50%); }
+      .timeline-card { position: relative; z-index: 1; margin: 0 8px; }
+      .checklist-grid { grid-template-columns: repeat(3, 1fr); }
+      .sanctions-grid { grid-template-columns: repeat(4, 1fr); }
+      .diff-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 639px) {
+      .sticky-cta.visible { display: block; }
+      .hero-callout { display: none; }
+      .section { padding: 40px 0; }
+      .timeline-grid { gap: 12px; }
+    }
+  </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "N2F Facturation Électronique",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "description": "Solution de facturation électronique conforme à la réforme 2026. PDP certifiée DGFiP. OCR + IA, workflows de validation, intégrations ERP natives (Sage, Cegid, SAP, Oracle, Netsuite), archivage probant.",
+    "offers": { "@type": "Offer", "priceCurrency": "EUR", "price": "0", "description": "Vérification de conformité gratuite" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "ratingCount": "1000", "bestRating": "5" },
+    "provider": {
+      "@type": "Organization", "name": "N2F", "url": "https://www.n2f.com",
+      "address": { "@type": "PostalAddress", "streetAddress": "86 rue de Paris", "addressLocality": "Villeurbanne", "postalCode": "69100", "addressCountry": "FR" }
+    }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ==================== NAV ==================== -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo" aria-label="N2F"><img src="./img/N2F-logo.svg" alt="N2F" width="60" height="28"></a>
+    <a href="#conformite" class="btn btn-primary">Vérifier Ma Conformité</a>
+  </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ff6b6b" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <span>J-<span class="countdown" id="countdownBadge">---</span> avant l'obligation</span>
+      </div>
+      <h1>Facturation Électronique <span class="accent">2026</span> : Votre Entreprise Est-Elle <span class="accent">Prête ?</span></h1>
+      <p class="hero-sub">À partir du 1er septembre 2026, <strong>TOUTES les entreprises françaises</strong> devront réceptionner des factures électroniques via une PDP. N2F est <strong>plateforme agréée DGFiP depuis juillet 2025</strong> -- avec OCR + IA, workflows configurables et intégrations ERP natives (Sage, Cegid, SAP).</p>
+      <div class="hero-ctas">
+        <a href="#conformite" class="btn btn-primary">Vérifier Ma Conformité</a>
+        <a href="#features" class="btn btn-outline">Voir les Fonctionnalités</a>
+      </div>
+      <div class="hero-trust-line">
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Sans engagement
+        </span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          Accompagnement dédié
+        </span>
+        <span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          PDP immatriculée DGFiP
+        </span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-callout hero-callout--1">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--green-light);display:flex;align-items:center;justify-content:center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#15A66C" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div><div class="hero-callout-num" style="color:var(--green);">PDP</div><div style="font-size:11px;color:var(--gray);">Certifiée DGFiP</div></div>
+      </div>
+      <div class="hero-callout hero-callout--2">
+        <div style="width:36px;height:36px;border-radius:8px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EE5700" stroke-width="2.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+        </div>
+        <div><div class="hero-callout-num" style="color:var(--accent);">ERP</div><div style="font-size:11px;color:var(--gray);">Sage, Cegid, SAP...</div></div>
+      </div>
+      <div class="hero-callout hero-callout--3">
+        <div style="width:36px;height:36px;border-radius:8px;background:#EDF0FF;display:flex;align-items:center;justify-content:center;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4F46E5" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div><div class="hero-callout-num" style="color:#4F46E5;">6-8 sem.</div><div style="font-size:11px;color:var(--gray);">Déploiement</div></div>
+      </div>
+      <img src="./img/hero-ap-dashboard-pa-badge.png" alt="Tableau de bord N2F factures fournisseurs avec badge PDP Plateforme Agréée" width="860" height="520">
+    </div>
+  </div>
+</header>
+
+<!-- ==================== LOGOS ==================== -->
+<section class="logos">
+  <div class="container text-center">
+    <p class="logos-label">18 000+ entreprises font confiance à N2F</p>
+    <div class="logos-grid">
+      <img src="./img/logo-babolat-1-300x200.png" alt="Babolat" width="90" height="28" loading="lazy">
+      <img src="./img/logo-bigmat-300x200.png" alt="BigMat" width="90" height="28" loading="lazy">
+      <img src="./img/logo-cultura-300x200.png" alt="Cultura" width="90" height="28" loading="lazy">
+      <img src="./img/logo-mr-bricolage-1-300x200.png" alt="Mr Bricolage" width="90" height="28" loading="lazy">
+      <img src="./img/logo-champagne-lanson-300x200.png" alt="Champagne Lanson" width="90" height="28" loading="lazy">
+      <img src="./img/logo-suzuki-300x200.png" alt="Suzuki" width="90" height="28" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ==================== REFORM TIMELINE ==================== -->
+<section class="section section-light">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-title">Le Calendrier de la Réforme</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">La facturation électronique obligatoire arrive par étapes. Votre entreprise doit être prête pour la première échéance.</p>
+    </div>
+    <div class="timeline-grid" style="position:relative;">
+      <div class="timeline-connector"></div>
+      <div class="timeline-card">
+        <div class="timeline-date">Juillet 2025</div>
+        <h3>N2F immatriculée PDP</h3>
+        <p>N2F obtient son immatriculation Plateforme de Dématérialisation Partenaire auprès de la DGFiP.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-date">Février 2026</div>
+        <h3>Pilote élargi</h3>
+        <p>Le pilote s'ouvre à 206 PDP candidates. Les premiers échanges de e-factures en conditions réelles commencent.</p>
+      </div>
+      <div class="timeline-card critical">
+        <div class="timeline-date">1er Sept. 2026</div>
+        <h3>Réception OBLIGATOIRE</h3>
+        <p>TOUTES les entreprises françaises doivent pouvoir recevoir des e-factures. Les grandes entreprises doivent aussi émettre.</p>
+      </div>
+      <div class="timeline-card">
+        <div class="timeline-date">1er Sept. 2027</div>
+        <h3>Émission PME-ETI</h3>
+        <p>Les PME et ETI doivent à leur tour émettre des factures électroniques via une PDP.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COMPLIANCE CHECKLIST ==================== -->
+<section class="section section-white">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-title">Êtes-Vous Prêt pour 2026 ?</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Vérifiez que votre entreprise coche tous les critères de conformité avant la date butoir.</p>
+    </div>
+    <div class="checklist-grid">
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15A66C" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span>Réception de factures via une PDP immatriculée</span>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15A66C" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span>Formats conformes (Factur-X, UBL, CII)</span>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15A66C" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span>E-reporting des données de transaction</span>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15A66C" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span>Annuaire centralisé des destinataires</span>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15A66C" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span>Archivage probant 10 ans</span>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#15A66C" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <span>Connecteur ERP certifié</span>
+      </div>
+    </div>
+    <div class="checklist-warning">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" style="display:inline;vertical-align:-3px;margin-right:6px;"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      Si vous n'avez pas coché tous les points, votre entreprise risque des sanctions à partir de septembre 2026.
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FEATURES SHOWCASE ==================== -->
+<section class="features-section" id="features">
+  <!-- Section Header -->
+  <div style="padding: 56px 0 0; background: var(--bg);">
+    <div class="container text-center">
+      <h2 class="section-title">Tout Ce Dont Vous Avez Besoin pour la Conformité 2026</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">N2F couvre l'intégralité du cycle fournisseur -- chaque fonctionnalité vous rapproche de la conformité septembre 2026.</p>
+    </div>
+  </div>
+
+  <!-- 1: OCR + Intelligence Artificielle (image LEFT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-block-img">
+          <img src="./img/n2f-ocr-extraction-tags.png" alt="N2F OCR : extraction automatique fournisseur, date, TVA, montant" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>OCR + Intelligence Artificielle</h3>
+          <p>Notre IA lit vos factures et extrait automatiquement le fournisseur, la date, la TVA et le montant -- avec extraction automatique haute précision. Conforme aux formats obligatoires Factur-X, UBL et CII.</p>
+          <ul class="feature-bullets">
+            <li>Multi-format : PDF, scan, Factur-X, UBL, CII</li>
+            <li>Détection automatique des doublons et anomalies</li>
+            <li>Apprentissage continu : l'IA s'améliore avec votre usage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2: Demandes d'Achat (image RIGHT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block reverse">
+        <div class="feature-block-img">
+          <img src="./img/n2f-sidebar-demandes-achat.png" alt="N2F Demande d'achat avec circuit d'approbation" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Demandes d'Achat</h3>
+          <p>Créez vos demandes d'achat, faites-les approuver selon vos circuits internes, puis générez automatiquement le bon de commande. Le lien DA &rarr; BC &rarr; Facture est tracé de bout en bout.</p>
+          <ul class="feature-bullets">
+            <li>Circuit d'approbation configurable par montant et axe analytique</li>
+            <li>Génération automatique du bon de commande</li>
+            <li>Traçabilité complète DA &rarr; BC &rarr; Facture &rarr; Paiement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3: Workflows de Validation (image LEFT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-block-img">
+          <img src="./img/n2f-validation-workflow.png" alt="N2F workflows de validation multi-niveaux" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Workflows de Validation</h3>
+          <p>Configurez des circuits de validation multi-niveaux selon vos règles métier. Chaque facture suit le bon chemin, chaque approbateur est notifié au bon moment.</p>
+          <ul class="feature-bullets">
+            <li>Validation séquentielle ou parallèle</li>
+            <li>Règles conditionnelles par montant, entité, projet</li>
+            <li>Historique complet et piste d'audit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4: Rapprochement 3 Voies (image RIGHT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block reverse">
+        <div class="feature-block-img">
+          <img src="./img/n2f-bon-de-commande.png" alt="N2F rapprochement automatique BC BL Facture" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Rapprochement 3 Voies</h3>
+          <p>Correspondance automatique entre Bon de Commande, Bon de Livraison et Facture. Les écarts sont signalés, les litiges sont tracés et gérés dans N2F.</p>
+          <ul class="feature-bullets">
+            <li>Matching automatique BC / BL / Facture</li>
+            <li>Écarts et litiges détectés et tracés</li>
+            <li>Gain : -70% de temps sur le rapprochement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5: Gestion Budgétaire (image LEFT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-block-img">
+          <img src="./img/n2f-factures-filters.png" alt="N2F gestion budgétaire avec filtres et axes analytiques" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Gestion Budgétaire</h3>
+          <p>Suivez vos budgets en temps réel par axe analytique, par entité, par projet. Alertes automatiques en cas de dépassement.</p>
+          <ul class="feature-bullets">
+            <li>Suivi budgétaire multi-axes en temps réel</li>
+            <li>Alertes de dépassement automatiques</li>
+            <li>Engagements fournisseurs visibles avant paiement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6: Multi-Entité & Multi-Axes (image RIGHT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block reverse">
+        <div class="feature-block-img">
+          <img src="./img/n2f-factures-dashboard-full.png" alt="N2F gestion multi-entité centralisée" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Multi-Entité & Multi-Axes</h3>
+          <p>Gérez toutes vos sociétés depuis une seule plateforme. Chaque entité a ses propres workflows, axes analytiques et exports comptables.</p>
+          <ul class="feature-bullets">
+            <li>Paramétrage indépendant par entité</li>
+            <li>Axes analytiques illimités</li>
+            <li>Consolidation groupe en temps réel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7: Suite Unifiée : AP + Notes de Frais + Cartes (image LEFT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-block-img">
+          <img src="./img/n2f-suite-overview.png" alt="N2F suite unifiée : factures, notes de frais, cartes corporatives" loading="lazy" width="600" height="400">
+        </div>
+        <div class="feature-block-text">
+          <h3>Suite Unifiée : AP + Notes de Frais + Cartes</h3>
+          <p>N2F est la SEULE solution du marché qui réunit factures fournisseurs, notes de frais et cartes corporatives Mastercard dans une plateforme unique. Un seul outil, une seule intégration ERP.</p>
+          <ul class="feature-bullets">
+            <li>Factures fournisseurs + Notes de frais + Cartes corporatives</li>
+            <li>Un seul connecteur ERP pour tout</li>
+            <li>Vision 360&deg; de la dépense en temps réel</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8: Intégrations ERP Natives (image RIGHT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block reverse">
+        <div class="feature-block-img">
+          <img src="./img/n2f-factures-dashboard-clean.png" alt="N2F connecteurs ERP Sage Cegid SAP" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Intégrations ERP Natives</h3>
+          <p>Export comptable automatique vers Sage, Cegid, SAP, Oracle, Microsoft Dynamics et Netsuite. Votre ERP est déjà compatible.</p>
+          <ul class="feature-bullets">
+            <li>Sage, Cegid, SAP, Oracle, Netsuite : intégration native</li>
+            <li>Export comptable automatique et réconciliation</li>
+            <li>APIs REST bidirectionnelles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9: PDP Certifiée + E-Reporting (image LEFT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-block-img">
+          <img src="./img/n2f-pdp-flow-diagram.png" alt="N2F PDP certifiée DGFiP - flux de facturation électronique" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>PDP Certifiée + E-Reporting</h3>
+          <p>N2F est plateforme agréée (PDP) immatriculée par la DGFiP depuis juillet 2025. Réception et émission d'e-factures. E-reporting fiscal automatique. Réseau PEPPOL.</p>
+          <ul class="feature-bullets">
+            <li>Immatriculée DGFiP depuis juillet 2025</li>
+            <li>Formats : Factur-X, UBL, CII, PDF structuré</li>
+            <li>E-reporting et annuaire via PPF</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10: Détection de Fraude IA (image RIGHT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block reverse">
+        <div class="feature-block-img">
+          <img src="./img/n2f-invoice-detail-ocr.png" alt="N2F détection de fraude : suspicion de doublon et anomalie" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Détection de Fraude IA</h3>
+          <p>L'IA anti-fraude détecte les doublons, les montants suspects, les IBAN modifiés et les fournisseurs à risque -- avant que le paiement ne parte.</p>
+          <ul class="feature-bullets">
+            <li>Détection de doublons automatique</li>
+            <li>Alerte IBAN modifié et fournisseur à risque</li>
+            <li>Suspicion de fraude signalée avant paiement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11: Paiement SEPA Intégré (image LEFT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-block-img">
+          <img src="./img/n2f-factures-with-amounts.png" alt="N2F paiement SEPA intégré" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Paiement SEPA Intégré</h3>
+          <p>Générez automatiquement les fichiers de paiement SEPA directement depuis N2F. Zéro ressaisie entre la validation et le virement.</p>
+          <ul class="feature-bullets">
+            <li>Génération automatique fichiers SEPA</li>
+            <li>Ordonnancement et suivi des paiements</li>
+            <li>Zéro ressaisie entre validation et paiement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12: Mobile + Archivage Probant (image RIGHT) -->
+  <div class="feature-showcase">
+    <div class="container">
+      <div class="feature-block reverse">
+        <div class="feature-block-img">
+          <img src="./img/n2f-mobile-receipt-scan.png" alt="N2F application mobile scan et validation" loading="lazy" width="600" height="500">
+        </div>
+        <div class="feature-block-text">
+          <h3>Mobile + Archivage Probant</h3>
+          <p>Validez vos factures en déplacement. Notifications push. Archivage à valeur probante conforme NF Z42-013 -- 10 ans minimum.</p>
+          <ul class="feature-bullets">
+            <li>App native iOS et Android</li>
+            <li>Notifications push pour validations urgentes</li>
+            <li>Archivage 10 ans conforme NF Z42-013</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- ==================== SANCTIONS & RISKS ==================== -->
+<section class="section section-light">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-title">Les Risques en Cas de Non-Conformité</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Ne pas être prêt en septembre 2026 expose votre entreprise à des conséquences financières et opérationnelles réelles.</p>
+    </div>
+    <div class="sanctions-grid">
+      <div class="sanction-card">
+        <h3>Amendes</h3>
+        <p>15 EUR par facture non conforme, plafonné à 15 000 EUR par an. Un coût évitable avec la bonne PDP.</p>
+      </div>
+      <div class="sanction-card">
+        <h3>Rejet des factures</h3>
+        <p>Vos clients et fournisseurs refuseront les factures papier ou PDF non structurés. Vous serez bloqué.</p>
+      </div>
+      <div class="sanction-card">
+        <h3>Perte de déductibilité TVA</h3>
+        <p>Factures non conformes = TVA non récupérable. L'impact financier peut être considérable.</p>
+      </div>
+      <div class="sanction-card">
+        <h3>Retard concurrentiel</h3>
+        <p>Vos concurrents seront déjà conformes en septembre 2026. Chaque mois de retard est un désavantage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHY N2F ==================== -->
+<section class="section section-accent">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-title">Pourquoi Choisir N2F pour la Réforme 2026 ?</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Ce qui fait de N2F le choix des DAF qui veulent aller au-delà de la simple conformité.</p>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-card">
+        <h3>PDP immatriculée DGFiP depuis juillet 2025</h3>
+        <p>Pas une promesse, un fait. N2F est déjà certifiée et opérationnelle pour la réception et l'émission de e-factures.</p>
+      </div>
+      <div class="diff-card">
+        <h3>La seule suite AP + NdF + Cartes du marché</h3>
+        <p>Un seul outil, une seule intégration. Yooz est AP-only, Spendesk est cartes-only. N2F combine les trois.</p>
+      </div>
+      <div class="diff-card">
+        <h3>Intégrations ERP natives (Sage, Cegid, SAP)</h3>
+        <p>Sage, Cegid, SAP, Oracle : votre ERP est déjà compatible. Export comptable en 1 clic, APIs bidirectionnelles.</p>
+      </div>
+      <div class="diff-card">
+        <h3>Déploiement en 6-8 semaines</h3>
+        <p>Accompagnement dédié, pas 6 mois de projet. Un consultant français configure vos workflows et exports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SOCIAL PROOF ==================== -->
+<section class="section section-white">
+  <div class="container text-center">
+    <h2 class="section-title">Ils nous font confiance</h2>
+    <div class="testimonial">
+      <blockquote>&#171; La réforme de la facturation électronique nous semblait complexe. Avec N2F, nous avons mis en place la réception e-factures en 3 semaines. L'équipe d'accompagnement a été décisive. &#187;</blockquote>
+      <cite>-- Directeur Administratif et Financier, ETI industrielle (2 500 factures/mois)</cite>
+    </div>
+    <div class="trust-badges">
+      <div class="trust-badge">
+        <img src="./img/afnor-certification-n2f-afq-iso-27001.png" alt="ISO 27001" loading="lazy">
+        <span>ISO 27001</span>
+      </div>
+      <div class="trust-badge">
+        <img src="./img/certification-capterra-2026.png" alt="Capterra" loading="lazy">
+        <span>Capterra 2026</span>
+      </div>
+      <div class="trust-badge">
+        <img src="./img/certification-g2.png" alt="G2" loading="lazy">
+        <span>G2 Leader</span>
+      </div>
+      <div class="trust-badge">
+        <img src="./img/logo-trustpilot2.svg" alt="Trustpilot 4.7/5" loading="lazy">
+        <span>4.7/5</span>
+      </div>
+      <div class="trust-badge">
+        <img src="./img/medal-ecovadis-2026-80x80.webp" alt="EcoVadis" loading="lazy">
+        <span>EcoVadis</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section class="section section-light">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-title">Questions Fréquentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Qu'est-ce que la facturation électronique obligatoire de 2026 ?</button>
+        <div class="faq-a"><div class="faq-a-inner">À partir du 1er septembre 2026, toutes les entreprises françaises devront être capables de recevoir des factures électroniques au format structuré (Factur-X, UBL ou CII) via une Plateforme de Dématérialisation Partenaire (PDP). Le portail public gratuit (PPF) a été annulé en octobre 2024 : les PDP sont désormais le seul canal autorisé. Les grandes entreprises devront aussi émettre des e-factures dès cette date, et les PME-ETI à partir de septembre 2027.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Qu'est-ce qu'une PDP (Plateforme de Dématérialisation Partenaire) ?</button>
+        <div class="faq-a"><div class="faq-a-inner">Une PDP est une plateforme immatriculée par la DGFiP (Direction Générale des Finances Publiques) pour transmettre et recevoir des factures électroniques conformes. Elle assure l'acheminement des factures entre entreprises, la transmission des données fiscales à l'administration (e-reporting), et l'archivage à valeur probante. En mars 2026, 206 PDP candidates sont dans le pipeline. N2F est immatriculée PDP depuis juillet 2025.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Quelles sont les sanctions en cas de non-conformité ?</button>
+        <div class="faq-a"><div class="faq-a-inner">Les sanctions prévues incluent une amende de 15 EUR par facture non conforme, plafonnée à 15 000 EUR par an. Au-delà des amendes, les risques opérationnels sont importants : rejet de vos factures par les partenaires commerciaux, perte de déductibilité de la TVA sur les factures non conformes, et retard concurrentiel par rapport aux entreprises déjà équipées.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">N2F est-elle certifiée PDP par la DGFiP ?</button>
+        <div class="faq-a"><div class="faq-a-inner">Oui. N2F est officiellement immatriculée Plateforme de Dématérialisation Partenaire (PDP) par la DGFiP depuis juillet 2025. Cela inclut la réception et l'émission de e-factures aux formats Factur-X, UBL et CII, la transmission des données fiscales (e-reporting), l'archivage à valeur probante 10 ans et la connexion au réseau PEPPOL européen. La certification PDP est incluse dans l'abonnement N2F, sans surcoût.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Quels formats de facture N2F supporte-t-il ?</button>
+        <div class="faq-a"><div class="faq-a-inner">N2F supporte tous les formats requis par la réforme : Factur-X (format hybride PDF + XML), UBL (Universal Business Language) et CII (Cross-Industry Invoice). N2F accepte également les factures PDF classiques via son moteur OCR + IA, ainsi que la réception via email dédié, upload manuel, API ou réseau PEPPOL.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Combien de temps prend le déploiement de N2F ?</button>
+        <div class="faq-a"><div class="faq-a-inner">Le déploiement typique prend 6-8 semaines, sans besoin d'intégrateur externe. Un consultant français dédié configure vos workflows de validation, axes analytiques, connecteurs ERP et paramètres de conformité. Pour les structures multi-entités ou les cas complexes, comptez 8 à 10 semaines. N2F est opérationnel bien avant l'échéance de septembre 2026.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">N2F est-il compatible avec mon ERP (Sage, Cegid, SAP) ?</button>
+        <div class="faq-a"><div class="faq-a-inner">Oui. N2F propose des connecteurs d'export comptable natifs pour Sage, Cegid, SAP, Oracle, Microsoft Dynamics et Netsuite. Les écritures comptables sont générées automatiquement et exportées en 1 clic. N2F gère tout le processus amont (réception, validation, analytique, conformité) et votre ERP reste maître de la comptabilité. Les APIs sont bidirectionnelles.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">La facturation électronique concerne-t-elle les PME ?</button>
+        <div class="faq-a"><div class="faq-a-inner">Oui, absolument. Dès septembre 2026, TOUTES les entreprises françaises, quelle que soit leur taille, devront être capables de recevoir des e-factures via une PDP. Pour l'émission, les PME et ETI auront un an de plus (septembre 2027). Mais attendre la dernière minute serait risqué : les 206 PDP candidates seront surchargées de demandes. Les entreprises qui s'équipent maintenant bénéficient d'un accompagnement dédié et évitent la cohue.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FORM ==================== -->
+<section class="form-section" id="conformite">
+  <div class="container">
+    <div class="form-wrapper">
+      <h2>Vérifiez Votre Conformité 2026</h2>
+      <p>30 minutes pour évaluer votre niveau de préparation à la réforme et découvrir comment N2F peut vous mettre en conformité.</p>
+      <div id="hubspot-form"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== STICKY MOBILE CTA ==================== -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-inner">
+    <div class="sticky-cta-text"><strong>J-<span id="countdownSticky">---</span></strong> -- Vérifiez votre conformité</div>
+    <a href="#conformite" class="btn btn-primary">Vérifier Ma Conformité</a>
+  </div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo"><img src="./img/N2F-logo.svg" alt="N2F" width="50" height="20"></div>
+    <p class="footer-cta">Prêt pour la réforme 2026 ? <a href="tel:+33478505050">04 78 50 50 50</a></p>
+    <p>N2F par N2JSoft -- 86 rue de Paris, 69100 Villeurbanne</p>
+    <p>Plateforme agréée (PDP) certifiée DGFiP -- ISO 27001 -- RGPD</p>
+    <p>&copy; 2026 N2F. Tous droits réservés. <a href="https://www.n2f.com/fr/mentions-legales/">Mentions légales</a> &middot; <a href="https://www.n2f.com/fr/politique-de-confidentialite/">Confidentialité</a></p>
+  </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script>
+  // Countdown to Sept 1, 2026
+  function updateCountdown() {
+    var target = new Date('2026-09-01T00:00:00+02:00');
+    var now = new Date();
+    var diff = Math.ceil((target - now) / (1000 * 60 * 60 * 24));
+    if (diff < 0) diff = 0;
+    var badgeEl = document.getElementById('countdownBadge');
+    var stickyEl = document.getElementById('countdownSticky');
+    if (badgeEl) badgeEl.textContent = diff;
+    if (stickyEl) stickyEl.textContent = diff;
+  }
+  updateCountdown();
+
+  // Nav scroll
+  window.addEventListener('scroll', function() {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Sticky CTA
+  var stickyCta = document.getElementById('stickyCta');
+  var heroHeight = document.querySelector('.hero').offsetHeight;
+  var formSection = document.getElementById('conformite');
+  window.addEventListener('scroll', function() {
+    var scrollY = window.scrollY;
+    var formTop = formSection.getBoundingClientRect().top + scrollY - window.innerHeight;
+    if (scrollY > heroHeight && scrollY < formTop) {
+      stickyCta.classList.add('visible');
+    } else {
+      stickyCta.classList.remove('visible');
+    }
+  });
+
+  // FAQ Accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var isOpen = this.classList.contains('active');
+      document.querySelectorAll('.faq-q').forEach(function(b) { b.classList.remove('active'); b.setAttribute('aria-expanded','false'); b.nextElementSibling.style.maxHeight = null; });
+      if (!isOpen) {
+        this.classList.add('active');
+        this.setAttribute('aria-expanded','true');
+        this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // HubSpot Form
+  var hs = document.createElement('script');
+  hs.src = 'https://js-eu1.hsforms.net/forms/embed/v2.js';
+  hs.onload = function() {
+    hbspt.forms.create({
+      region: 'eu1',
+      portalId: '143258107',
+      formId: 'b922ae80-2aba-4e29-a1f5-4301a87b5f67',
+      target: '#hubspot-form',
+      onFormSubmit: function() {
+        if (window.dataLayer) {
+          window.dataLayer.push({ event: 'lp_form_submit', lp_name: 'facturation-2026', lp_cta: 'verifier-conformite' });
+        }
+      }
+    });
+  };
+  document.body.appendChild(hs);
+
+  // UTM capture
+  function getUTM(p) { return new URLSearchParams(window.location.search).get(p) || ''; }
+  window.addEventListener('message', function(event) {
+    if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormReady') {
+      var params = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'];
+      params.forEach(function(p) {
+        var v = getUTM(p);
+        if (v) {
+          var input = document.querySelector('#hubspot-form input[name="' + p + '"]');
+          if (input) input.value = v;
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
