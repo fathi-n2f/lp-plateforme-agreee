@@ -211,7 +211,18 @@
     }
   
 /* === EXIT POPUP === */
-.exit-popup{border:none;border-radius:16px;padding:36px;max-width:460px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.exit-popup{border:none;border-radius:16px;padding:36px;max-width:620px;width:92%;margin:auto;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+.exit-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.exit-card{display:flex;flex-direction:column;border:2px solid #e5e7eb;border-radius:12px;overflow:hidden;text-decoration:none;color:#2E2A27;transition:border-color .2s,box-shadow .2s}
+.exit-card:hover{border-color:#EE5700;box-shadow:0 4px 16px rgba(238,87,0,.12)}
+.exit-card img{width:100%;height:140px;object-fit:cover;object-position:top}
+.exit-card-body{padding:14px}
+.exit-card-body h4{font-size:.92rem;font-weight:700;margin-bottom:6px;line-height:1.3}
+.exit-card-body p{font-size:.78rem;color:#6b7280;line-height:1.4;margin:0}
+.exit-card-tag{display:inline-block;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;padding:3px 8px;border-radius:4px;margin-bottom:8px}
+.exit-card-tag.diag{background:#FFF3EC;color:#EE5700}
+.exit-card-tag.ebook{background:#ECFDF5;color:#059669}
+@media(max-width:520px){.exit-cards{grid-template-columns:1fr}.exit-card img{height:120px}}
 .exit-popup::backdrop{background:rgba(0,0,0,.5)}
 .exit-popup h3{font-size:1.2rem;font-weight:700;margin-bottom:10px}
 .exit-popup p{font-size:.9rem;color:#6b7280;margin-bottom:18px;line-height:1.6}
@@ -903,10 +914,27 @@
 <!-- EXIT POPUP -->
 <dialog class="exit-popup" id="exit-popup">
 <button class="close-x" aria-label="Fermer">&times;</button>
-<h3>Préparez votre transition 2026</h3>
-<p>Recevez notre checklist de conformité gratuite : 12 points à valider avant septembre 2026.</p>
-<form id="exit-form"><input type="email" placeholder="Votre email professionnel" required aria-label="Email"><button type="submit" class="btn btn-primary" style="padding:12px 20px">Recevoir la checklist</button></form>
-<a href="https://diagnostic-facturation-electronique.n2f.com/?utm_source=lp&utm_medium=exit-popup&utm_campaign=facturation-2026" target="_blank" rel="noopener" class="secondary-link">Ou testez notre diagnostic en ligne &rarr;</a>
+<h3>Pas encore prêt ? Deux ressources gratuites.</h3>
+<p>Évaluez votre conformité ou préparez votre projet, sans engagement.</p>
+<div class="exit-cards">
+  <a href="https://diagnostic-facturation-electronique.n2f.com/" target="_blank" rel="noopener" class="exit-card" onclick="document.getElementById('exit-popup').close()">
+    <img src="img/misc/diagnostic-preview.png" alt="Diagnostic de conformité e-invoicing">
+    <div class="exit-card-body">
+      <span class="exit-card-tag diag">Diagnostic gratuit</span>
+      <h4>Testez votre conformité en 5 min</h4>
+      <p>Score Factur-X, risque estimé, rapport personnalisé selon votre ERP.</p>
+    </div>
+  </a>
+  <a href="https://www.n2f.com/fr/nos-ressources/checklist-comment-bien-se-preparer-a-la-rfe/" target="_blank" rel="noopener" class="exit-card" onclick="document.getElementById('exit-popup').close()">
+    <img src="img/misc/checklist-rfe-cover.png" alt="Checklist RFE N2F">
+    <div class="exit-card-body">
+      <span class="exit-card-tag ebook">Checklist PDF</span>
+      <h4>Préparez la réforme étape par étape</h4>
+      <p>Obligations, calendrier, actions concrètes pour être prêt en septembre 2026.</p>
+    </div>
+  </a>
+</div>
+<a href="#demo-form-section" class="secondary-link" onclick="document.getElementById('exit-popup').close()">Ou demandez directement une démo &rarr;</a>
 </dialog>
 
 <script>
@@ -914,10 +942,11 @@
 var pop=document.getElementById('exit-popup'),CK='n2f_exit_dismissed';
 function gc(n){var m=document.cookie.match(new RegExp('(^| )'+n+'=([^;]+)'));return m?m[2]:null}
 function sc2(n,v,d){var x=new Date();x.setTime(x.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+x.toUTCString()+';path=/;SameSite=Lax'}
+/* Append UTM params to exit popup links */
+(function(){var qs=window.location.search;if(qs){var utms=new URLSearchParams(qs);var keep=[];['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(function(k){var v=utms.get(k);if(v)keep.push(k+'='+encodeURIComponent(v))});if(keep.length){var suffix=keep.join('&');pop.querySelectorAll('a.exit-card').forEach(function(a){var href=a.getAttribute('href');a.setAttribute('href',href+(href.indexOf('?')>-1?'&':'?')+suffix)})}}})();
 if(!gc(CK)){document.documentElement.addEventListener('mouseleave',function handler(e){if(e.clientY<=0){pop.showModal();document.documentElement.removeEventListener('mouseleave',handler)}})}
 pop.querySelector('.close-x').addEventListener('click',function(){pop.close();sc2(CK,'1',7)});
 pop.addEventListener('click',function(e){if(e.target===pop){pop.close();sc2(CK,'1',7)}});
-document.getElementById('exit-form').addEventListener('submit',function(e){e.preventDefault();pop.close();sc2(CK,'1',30);alert('Merci ! Votre checklist arrive par email.')});
 </script>
 </body>
 </html>

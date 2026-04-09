@@ -302,31 +302,27 @@ a{color:inherit;text-decoration:none}
 .footer{background:var(--dark);color:rgba(255,255,255,.6);padding:28px 0;text-align:center;font-size:.82rem}
 .footer a{color:rgba(255,255,255,.8)}
 
-/* === EXIT POPUP — SIMULATOR-FIRST === */
-.exit-popup{border:none;border-radius:var(--radius-xl);padding:0;max-width:580px;width:94%;box-shadow:0 24px 80px rgba(0,0,0,.3);overflow:hidden}
-.exit-popup::backdrop{background:rgba(46,42,39,.65);backdrop-filter:blur(4px)}
-.exit-popup .close-x{position:absolute;top:12px;right:14px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:rgba(255,255,255,.6);z-index:2;transition:color .2s}
-.exit-popup .close-x:hover{color:#fff}
-.exit-popup-header{background:linear-gradient(135deg,var(--dark),#433C37);color:#fff;padding:28px 28px 20px;position:relative;overflow:hidden}
-.exit-popup-header::before{content:'';position:absolute;top:-40px;right:-40px;width:140px;height:140px;background:radial-gradient(circle,rgba(238,87,0,.2),transparent 70%);pointer-events:none}
-.exit-popup-stat{font-size:1.35rem;font-weight:800;line-height:1.25;margin-bottom:6px;position:relative}
-.exit-popup-stat .orange{color:var(--orange)}
-.exit-popup-header p{font-size:.85rem;color:rgba(255,255,255,.6);line-height:1.5;position:relative}
-.exit-popup-body{padding:20px 28px 28px;background:#fff}
-.exit-popup-mockup{margin:0 -8px 18px;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.08);border:1px solid var(--gray-100)}
-.exit-popup-mockup img{width:100%;height:auto;display:block}
-.exit-popup-results{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
-.exit-popup-result{text-align:center;padding:10px 6px;background:var(--cream);border-radius:8px}
-.exit-popup-result svg{width:18px;height:18px;color:var(--orange);margin-bottom:4px}
-.exit-popup-result span{display:block;font-size:.72rem;font-weight:600;color:var(--dark);line-height:1.3}
-.exit-popup-cta{display:block;width:100%;text-align:center;padding:14px 24px;border-radius:var(--radius);font-weight:700;font-size:.95rem;cursor:pointer;border:none;transition:var(--transition);font-family:inherit;line-height:1;text-decoration:none}
-.exit-popup-cta.primary{background:var(--orange);color:#fff;box-shadow:0 4px 20px rgba(238,87,0,.35);margin-bottom:10px}
-.exit-popup-cta.primary:hover{background:var(--syracuse);transform:translateY(-1px);box-shadow:0 6px 28px rgba(238,87,0,.45)}
-.exit-popup-cta.secondary{background:var(--cream);color:var(--dark);border:1px solid var(--apricot);text-decoration:none}
-.exit-popup-cta.secondary:hover{background:var(--apricot)}
-.exit-popup-or{text-align:center;font-size:.72rem;color:var(--gray-400);margin:8px 0}
-.exit-popup-trust{text-align:center;margin-top:14px;font-size:.72rem;color:var(--gray-400)}
-.exit-popup-trust span{margin:0 6px}
+/* === EXIT POPUP === */
+.exit-popup{border:none;border-radius:var(--radius-xl);padding:36px;max-width:620px;width:92%;margin:auto;box-shadow:var(--shadow-lg)}
+.exit-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.exit-card{display:flex;flex-direction:column;border:2px solid var(--gray-200);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--dark);transition:border-color .2s,box-shadow .2s}
+.exit-card:hover{border-color:var(--orange);box-shadow:0 4px 16px rgba(238,87,0,.12)}
+.exit-card img{width:100%;height:140px;object-fit:cover;object-position:top}
+.exit-card-body{padding:14px}
+.exit-card-body h4{font-size:.92rem;font-weight:700;margin-bottom:6px;line-height:1.3}
+.exit-card-body p{font-size:.78rem;color:var(--gray-500);line-height:1.4;margin:0}
+.exit-card-tag{display:inline-block;font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.03em;padding:3px 8px;border-radius:4px;margin-bottom:8px}
+.exit-card-tag.diag{background:#FFF3EC;color:var(--orange)}
+.exit-card-tag.ebook{background:#ECFDF5;color:#059669}
+@media(max-width:520px){.exit-cards{grid-template-columns:1fr}.exit-card img{height:120px}}
+.exit-popup::backdrop{background:rgba(0,0,0,.5)}
+.exit-popup h3{font-size:1.2rem;font-weight:700;margin-bottom:10px}
+.exit-popup p{font-size:.9rem;color:var(--gray-500);margin-bottom:18px;line-height:1.6}
+.exit-popup form{display:flex;gap:8px;margin-bottom:14px}
+.exit-popup input[type=email]{flex:1;padding:12px 14px;border:2px solid var(--gray-200);border-radius:var(--radius);font-family:inherit;font-size:.88rem}
+.exit-popup input[type=email]:focus{border-color:var(--orange);outline:none}
+.exit-popup .secondary-link{display:block;text-align:center;font-size:.82rem;color:var(--orange);margin-top:10px;font-weight:500}
+.exit-popup .close-x{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:var(--gray-400)}
 
 /* === SIMULATOR BANNER === */
 .sim-banner{padding:0;position:relative}
@@ -868,27 +864,30 @@ a{color:inherit;text-decoration:none}
 <div class="container"><p>&copy; 2026 N2F — <a href="https://www.n2f.com/fr/mentions-legales/" target="_blank" rel="noopener">Mentions légales</a> · <a href="https://www.n2f.com/fr/politique-de-confidentialite/" target="_blank" rel="noopener">Politique de confidentialité</a></p></div>
 </footer>
 
-<!-- EXIT POPUP — SIMULATOR-FIRST -->
+<!-- EXIT POPUP -->
 <dialog class="exit-popup" id="exit-popup">
 <button class="close-x" aria-label="Fermer">&times;</button>
-<div class="exit-popup-header">
-  <div class="exit-popup-stat">72 % pensent être prêts.<br><span class="orange">1 % le sont.</span></div>
-  <p>Et vous ? Découvrez votre score de conformité en moins de 5 minutes.</p>
+<h3>Pas encore prêt ? Deux ressources gratuites.</h3>
+<p>Évaluez votre conformité ou préparez votre projet, sans engagement.</p>
+<div class="exit-cards">
+  <a href="https://diagnostic-facturation-electronique.n2f.com/" target="_blank" rel="noopener" class="exit-card" onclick="document.getElementById('exit-popup').close()">
+    <img src="img/misc/diagnostic-preview.png" alt="Diagnostic de conformité e-invoicing">
+    <div class="exit-card-body">
+      <span class="exit-card-tag diag">Diagnostic gratuit</span>
+      <h4>Testez votre conformité en 5 min</h4>
+      <p>Score Factur-X, risque estimé, rapport personnalisé selon votre ERP.</p>
+    </div>
+  </a>
+  <a href="https://www.n2f.com/fr/nos-ressources/checklist-comment-bien-se-preparer-a-la-rfe/" target="_blank" rel="noopener" class="exit-card" onclick="document.getElementById('exit-popup').close()">
+    <img src="img/misc/checklist-rfe-cover.png" alt="Checklist RFE N2F">
+    <div class="exit-card-body">
+      <span class="exit-card-tag ebook">Checklist PDF</span>
+      <h4>Préparez la réforme étape par étape</h4>
+      <p>Obligations, calendrier, actions concrètes pour être prêt en septembre 2026.</p>
+    </div>
+  </a>
 </div>
-<div class="exit-popup-body">
-  <div class="exit-popup-mockup">
-    <img src="img/simulator-screenshot.png" alt="Aperçu du diagnostic de conformité e-invoicing N2F — score, risque financier et plan d'action" width="1200" height="800" loading="lazy">
-  </div>
-  <div class="exit-popup-results">
-    <div class="exit-popup-result"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg><span>Score sur 30</span></div>
-    <div class="exit-popup-result"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/></svg><span>Risque financier</span></div>
-    <div class="exit-popup-result"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25Z"/></svg><span>Plan d'action</span></div>
-  </div>
-  <a href="https://diagnostic-facturation-electronique.n2f.com/?utm_source=lp&utm_medium=exit-popup&utm_campaign=reforme-2026" target="_blank" rel="noopener" class="exit-popup-cta primary" id="exit-cta">Lancer mon diagnostic gratuit</a>
-  <div class="exit-popup-or">ou</div>
-  <a href="#demo-form-section" class="exit-popup-cta secondary" id="exit-cta-demo">Parler à un expert conformité</a>
-  <div class="exit-popup-trust">100 % gratuit <span>·</span> Sans inscription <span>·</span> Résultats immédiats</div>
-</div>
+<a href="#demo-form-section" class="secondary-link" onclick="document.getElementById('exit-popup').close()">Ou demandez directement une démo &rarr;</a>
 </dialog>
 
 <!-- STICKY MOBILE CTA -->
@@ -953,12 +952,11 @@ if('IntersectionObserver' in window){new IntersectionObserver(function(e){e.forE
 var pop=document.getElementById('exit-popup'),CK='n2f_exit_dismissed';
 function gc(n){var m=document.cookie.match(new RegExp('(^| )'+n+'=([^;]+)'));return m?m[2]:null}
 function sc2(n,v,d){var x=new Date();x.setTime(x.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+x.toUTCString()+';path=/;SameSite=Lax'}
+/* Append UTM params to exit popup links */
+(function(){var qs=window.location.search;if(qs){var utms=new URLSearchParams(qs);var keep=[];['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(function(k){var v=utms.get(k);if(v)keep.push(k+'='+encodeURIComponent(v))});if(keep.length){var suffix=keep.join('&');pop.querySelectorAll('a.exit-card').forEach(function(a){var href=a.getAttribute('href');a.setAttribute('href',href+(href.indexOf('?')>-1?'&':'?')+suffix)})}}})();
 if(!gc(CK)){document.documentElement.addEventListener('mouseleave',function handler(e){if(e.clientY<=0){pop.showModal();document.documentElement.removeEventListener('mouseleave',handler)}})}
 pop.querySelector('.close-x').addEventListener('click',function(){pop.close();sc2(CK,'1',7)});
 pop.addEventListener('click',function(e){if(e.target===pop){pop.close();sc2(CK,'1',7)}});
-document.getElementById('exit-cta').addEventListener('click',function(){sc2(CK,'1',30)});
-var exitDemo=document.getElementById('exit-cta-demo');
-if(exitDemo)exitDemo.addEventListener('click',function(){pop.close();sc2(CK,'1',30)});
 
 /* HubSpot form embed */
 window.addEventListener('DOMContentLoaded',function(){
