@@ -135,7 +135,7 @@ a{color:inherit;text-decoration:none}
 .feature-visual img{border-radius:var(--radius-xl);box-shadow:var(--shadow)}
 .feature-visual .detail-img{position:absolute;bottom:-16px;right:-16px;width:45%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);border:3px solid #fff}
 .feature-visual{position:relative}
-@media(max-width:768px){.feature-grid,.feature-grid.reverse{grid-template-columns:1fr;direction:ltr;gap:32px}.feature-visual{order:-1}.feature-visual .detail-img{position:static;width:100%;margin-top:12px;border:none}}
+@media(max-width:768px){.feature-grid,.feature-grid.reverse{grid-template-columns:1fr;direction:ltr;gap:32px}.feature-visual{order:-1;overflow:hidden}.feature-visual img{max-width:100%;height:auto}.feature-visual .detail-img{position:static;width:100%;margin-top:12px;border:none}.feature-section img{max-width:100%;height:auto}}
 
 /* === MORE FEATURES TABS === */
 .more-features{padding:80px 0;background:#fff}
@@ -148,7 +148,7 @@ a{color:inherit;text-decoration:none}
 @keyframes fadeTab{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .feat-panel h3{font-size:1.35rem;font-weight:700;margin-bottom:16px}
 .feat-panel img{border-radius:var(--radius-xl);box-shadow:var(--shadow)}
-@media(max-width:768px){.feat-panel.active{grid-template-columns:1fr}}
+@media(max-width:768px){.feat-panel.active{grid-template-columns:1fr}.feat-panel img{max-width:100%;height:auto}.feat-purchase-detail{position:static!important;width:100%!important;bottom:auto!important;right:auto!important;margin-top:12px;border:none!important}.feat-purchase-visual{overflow:hidden}}
 
 /* === URGENCY === */
 .urgency{background:var(--dark);color:#fff;padding:80px 0;position:relative;overflow:hidden}
@@ -265,7 +265,7 @@ a{color:inherit;text-decoration:none}
 .faq-item p{padding:0 24px 18px;font-size:.9rem;color:var(--gray-600);line-height:1.75}
 
 /* === FOOTER === */
-.footer{background:var(--dark);color:rgba(255,255,255,.6);padding:28px 0;text-align:center;font-size:.82rem}
+.footer{background:var(--dark);color:rgba(255,255,255,.6);padding:28px 0 80px;text-align:center;font-size:.82rem}
 .footer a{color:rgba(255,255,255,.8)}
 
 /* === EXIT POPUP === */
@@ -312,12 +312,16 @@ a{color:inherit;text-decoration:none}
 .ai-card h4{font-size:.95rem;font-weight:700;margin-bottom:6px}
 .ai-card p{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.6}
 .ai-visual{text-align:center;margin-top:40px}
-.ai-visual img{border-radius:var(--radius-xl);box-shadow:0 12px 48px rgba(0,0,0,.4);max-width:600px;margin:0 auto;border:1px solid rgba(255,255,255,.08)}
-@media(max-width:768px){.ai-grid{grid-template-columns:1fr 1fr;gap:12px}}
+.ai-visual img{border-radius:var(--radius-xl);box-shadow:0 12px 48px rgba(0,0,0,.4);max-width:600px;width:100%;margin:0 auto;border:1px solid rgba(255,255,255,.08)}
+@media(max-width:768px){.ai-grid{grid-template-columns:1fr 1fr;gap:12px}.ai-visual{overflow:hidden}.ai-visual img{max-width:100%}}
 @media(max-width:480px){.ai-grid{grid-template-columns:1fr}}
 </style>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://tag.n2f.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W2XTKMF');</script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://tag.n2f.com/ns.html?id=GTM-W2XTKMF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
 <header class="header" id="header">
@@ -466,7 +470,7 @@ a{color:inherit;text-decoration:none}
 </div>
 <div style="margin-top:24px;text-align:center" class="fade-in">
   <p style="font-size:.82rem;font-weight:600;color:var(--gray-500);margin-bottom:12px">Compatible avec vos outils existants</p>
-  <img src="img/features/fr-integration-comptable.png" alt="SAP, Sage, Cegid, Oracle NetSuite, Dynamics 365" loading="lazy" style="max-width:600px;margin:0 auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)">
+  <img src="img/features/fr-integration-comptable.png" alt="SAP, Sage, Cegid, Oracle NetSuite, Dynamics 365" loading="lazy" style="max-width:600px;width:100%;margin:0 auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm)">
 </div>
 </div></div>
 </section>
@@ -552,7 +556,7 @@ a{color:inherit;text-decoration:none}
       </ul>
       <a href="#demo-form-section" class="btn btn-primary">Demander une démo</a>
     </div>
-    <div style="position:relative"><img src="img/features/fr-bon-commande.png" alt="Rapprochement bon de commande et facture" loading="lazy" style="border-radius:var(--radius-xl);box-shadow:var(--shadow)"><img src="img/features/fr-demande-achat.png" alt="Demande d'achat N2F" loading="lazy" style="position:absolute;bottom:-12px;right:-12px;width:45%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);border:3px solid #fff"></div>
+    <div class="feat-purchase-visual" style="position:relative"><img src="img/features/fr-bon-commande.png" alt="Rapprochement bon de commande et facture" loading="lazy" style="border-radius:var(--radius-xl);box-shadow:var(--shadow)"><img class="feat-purchase-detail" src="img/features/fr-demande-achat.png" alt="Demande d'achat N2F" loading="lazy" style="position:absolute;bottom:-12px;right:-12px;width:45%;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);border:3px solid #fff"></div>
   </div>
   <div class="feat-panel" id="ftab-budget">
     <div>
