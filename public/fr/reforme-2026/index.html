@@ -256,8 +256,10 @@ a{color:inherit;text-decoration:none}
 .testi-quote{font-size:.92rem;line-height:1.75;color:var(--gray-700);margin-bottom:20px;font-style:italic}
 .testi-footer{display:flex;align-items:center;gap:12px;padding-top:16px;border-top:1px solid var(--gray-200)}
 .testi-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--orange-light));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:.95rem;flex-shrink:0}
+.testi-logo{width:44px;height:44px;border-radius:10px;object-fit:contain;background:#fff;padding:4px;border:1px solid var(--gray-100);flex-shrink:0}
 .testi-author{font-weight:700;font-size:.88rem}
 .testi-role{font-size:.8rem;color:var(--gray-500)}
+.testi-company{font-size:.78rem;color:var(--orange);font-weight:600}
 @media(max-width:768px){.testi-grid{grid-template-columns:1fr}}
 
 /* === SUPPORT === */
@@ -361,7 +363,7 @@ a{color:inherit;text-decoration:none}
 .hero-pills .hp{display:inline-flex;align-items:center;gap:6px;background:var(--cream);border:1px solid var(--apricot);border-radius:999px;padding:6px 14px;font-size:.72rem;font-weight:600;color:var(--dark);white-space:nowrap}
 .hero-pills .hp svg{width:14px;height:14px;flex-shrink:0}
 .hp--green svg{color:var(--green)}.hp--orange svg{color:var(--orange)}.hp--blue svg{color:var(--blue)}.hp--syracuse svg{color:var(--syracuse)}
-@media(max-width:600px){.hero-float{display:none !important}.hero-pills{display:flex !important}}
+@media(max-width:768px){.hero-float{display:none !important}.hero-pills{display:flex !important}}
 
 /* === REDUCED MOTION === */
 @media(prefers-reduced-motion:reduce){
@@ -585,14 +587,14 @@ a{color:inherit;text-decoration:none}
       </div>
     </div>
     <div class="feature-card">
-      <img src="img/features/fr-n2f-factures-fournisseurs.png" alt="Gestion budgétaire — tableau de bord avec suivi des engagements par statut" width="2500" height="1875" loading="lazy">
+      <img src="img/features/fr-n2f-budget.png" alt="Gestion budgétaire — tableau de bord avec pilotage des budgets" width="2500" height="1875" loading="lazy">
       <div class="feature-card-body">
         <h3>Gestion budgétaire</h3>
         <p>Tableau de bord en temps réel : engagements, statuts de paiement, plafonds par axe analytique. Visibilité totale sur vos dépenses fournisseurs.</p>
       </div>
     </div>
     <div class="feature-card">
-      <img src="img/features/fr-n2f-workflow.png" alt="Paiement SEPA automatisé — ordres de paiement fournisseurs" width="2500" height="1875" loading="lazy">
+      <img src="img/features/fr-controle-bancaire.png" alt="Paiement SEPA automatisé — contrôle bancaire et ordres de paiement fournisseurs" width="2500" height="1875" loading="lazy">
       <div class="feature-card-body">
         <h3>Paiement SEPA automatisé</h3>
         <p>Génération automatique de fichiers de paiement SEPA. Ordonnancement et suivi des règlements fournisseurs.</p>
@@ -608,7 +610,7 @@ a{color:inherit;text-decoration:none}
 <div class="container">
   <div class="why-pa-grid fade-in">
     <div class="why-pa-content">
-      <h2>Pourquoi une Plateforme Agréée est indispensable</h2>
+      <h2>Pourquoi une Plateforme Agréée est indispensable ?</h2>
       <div class="why-pa-callout">Le portail public (PPF) a été annulé en octobre 2024. Les Plateformes Agréées sont désormais le <strong>seul chemin</strong> pour émettre et recevoir des e-factures en France.</div>
       <div class="why-pa-stat"><strong>206</strong> Plateformes en cours d'agrément (mars 2026)</div>
       <div class="why-pa-stat"><strong>Juil. 2025</strong> N2F certifiée Plateforme Agréée</div>
@@ -763,22 +765,22 @@ a{color:inherit;text-decoration:none}
     <div class="testi-card">
       <div class="testi-quote">Grâce à N2F, la comptabilité est devenue un service en avance. On a <strong>divisé par trois le temps de traitement</strong> des factures fournisseurs. Le ROI a été visible dès le premier trimestre.</div>
       <div class="testi-footer">
-        <div class="testi-avatar">GC</div>
-        <div><div class="testi-author">Grégory Clipet</div><div class="testi-role">Directeur Administratif et Financier</div></div>
+        <img src="img/logos/logo-mr-bricolage-1-300x200.png" alt="Mr.Bricolage" class="testi-logo">
+        <div><div class="testi-author">Grégory Clipet</div><div class="testi-role">Directeur Administratif et Financier</div><div class="testi-company">Mr.Bricolage</div></div>
       </div>
     </div>
     <div class="testi-card">
       <div class="testi-quote">L'automatisation des workflows a <strong>transformé notre pilotage financier</strong>. Mes équipes se concentrent sur l'analyse, plus sur la saisie. Le gain de productivité est immédiat.</div>
       <div class="testi-footer">
-        <div class="testi-avatar">CC</div>
-        <div><div class="testi-author">Claudine Coudene</div><div class="testi-role">Directrice Administrative et Financière</div></div>
+        <img src="img/logos/logo-babolat-1-300x200.png" alt="Babolat" class="testi-logo">
+        <div><div class="testi-author">Claudine Coudene</div><div class="testi-role">Directrice Administrative et Financière</div><div class="testi-company">Babolat</div></div>
       </div>
     </div>
     <div class="testi-card">
       <div class="testi-quote">La mise en conformité avec N2F a été fluide. <strong>Zéro interruption de service</strong>, intégration Sage native, et un accompagnement professionnel du début à la fin.</div>
       <div class="testi-footer">
-        <div class="testi-avatar">SR</div>
-        <div><div class="testi-author">Sophie Ramel</div><div class="testi-role">Responsable Financière</div></div>
+        <img src="img/logos/logo-naos.svg" alt="NAOS (Bioderma)" class="testi-logo">
+        <div><div class="testi-author">Sophie Ramel</div><div class="testi-role">Responsable Financière</div><div class="testi-company">NAOS (Bioderma)</div></div>
       </div>
     </div>
   </div>
