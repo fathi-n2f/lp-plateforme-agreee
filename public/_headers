@@ -1,0 +1,2 @@
+/fr/demo/*
+  Cache-Control: public, max-age=0, s-maxage=60
