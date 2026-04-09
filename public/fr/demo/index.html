@@ -181,6 +181,26 @@ a{color:inherit;text-decoration:none}
 .lp-form select{color:var(--gray-500)}
 .lp-form .btn{width:100%;justify-content:center;padding:14px}
 
+/* HubSpot form styling (when rendered in DOM, not iframe) */
+#hubspot-form iframe{width:100%!important;min-height:520px!important}
+#hubspot-form .hs-form{display:flex;flex-direction:column;gap:14px}
+#hubspot-form .hs-form-field label{font-size:.88rem;font-weight:600;color:var(--dark);margin-bottom:4px;display:block}
+#hubspot-form .hs-form-field label .hs-form-required{color:var(--orange)}
+#hubspot-form .hs-input{width:100%!important;padding:12px 14px!important;border:2px solid var(--gray-200)!important;border-radius:var(--radius)!important;font-family:inherit!important;font-size:.88rem!important;background:#fff!important;color:var(--dark)!important;transition:border-color .2s!important;box-sizing:border-box!important}
+#hubspot-form .hs-input:focus{border-color:var(--orange)!important;outline:none!important}
+#hubspot-form select.hs-input{color:var(--gray-500)!important}
+#hubspot-form .hs-fieldtype-checkbox ul{list-style:none!important;margin:0!important;padding:0!important}
+#hubspot-form .hs-form-checkbox{padding:4px 0!important}
+#hubspot-form .hs-form-checkbox label{display:flex!important;align-items:center!important;gap:8px!important;font-weight:400!important;cursor:pointer}
+#hubspot-form .hs-form-checkbox input[type=checkbox]{width:18px!important;height:18px!important;accent-color:var(--orange)!important;margin:0!important}
+#hubspot-form .hs-richtext{font-size:.78rem!important;color:var(--gray-500)!important;line-height:1.5!important}
+#hubspot-form .hs-richtext a{color:var(--orange)!important}
+#hubspot-form .hs-submit{margin-top:8px}
+#hubspot-form .hs-button{width:100%!important;padding:14px 28px!important;background:var(--orange)!important;color:#fff!important;border:none!important;border-radius:var(--radius)!important;font-family:inherit!important;font-weight:600!important;font-size:.95rem!important;cursor:pointer!important;transition:var(--transition)!important;box-shadow:0 4px 16px rgba(238,87,0,.3)!important}
+#hubspot-form .hs-button:hover{background:#d94e00!important;transform:translateY(-2px)!important}
+#hubspot-form .hs-error-msgs{list-style:none!important;padding:0!important;margin:4px 0 0!important}
+#hubspot-form .hs-error-msgs li label{color:var(--red)!important;font-size:.78rem!important;font-weight:400!important}
+
 /* FAQ */
 .faq{padding:80px 0;background:var(--gray-50)}
 .faq-list{max-width:760px;margin:0 auto}
@@ -424,7 +444,41 @@ a{color:inherit;text-decoration:none}
             portalId: 143258107,
             formId: "14e5e256-8327-4368-aec3-ae57f958829c",
             target: "#hubspot-form",
-            region: "eu1"
+            region: "eu1",
+            onFormReady: function($form){
+              var iframe = document.querySelector('#hubspot-form iframe');
+              if(iframe && iframe.contentDocument){
+                var style = iframe.contentDocument.createElement('style');
+                style.textContent = [
+                  'body{font-family:"Poppins",system-ui,sans-serif!important;margin:0!important;padding:0!important}',
+                  '.hs-form{display:flex;flex-direction:column;gap:14px}',
+                  '.hs-form-field label{font-size:.88rem;font-weight:600;color:#2E2A27;margin-bottom:4px;display:block}',
+                  '.hs-form-field label .hs-form-required{color:#EE5700}',
+                  '.hs-input{width:100%!important;padding:12px 14px!important;border:2px solid #E5E7EB!important;border-radius:8px!important;font-family:inherit!important;font-size:.88rem!important;background:#fff!important;color:#2E2A27!important;transition:border-color .2s!important;box-sizing:border-box!important}',
+                  '.hs-input:focus{border-color:#EE5700!important;outline:none!important}',
+                  'select.hs-input{color:#6B7280!important;appearance:auto!important}',
+                  '.hs-fieldtype-checkbox .hs-form-checkbox{list-style:none!important;margin:0!important;padding:4px 0!important}',
+                  '.hs-fieldtype-checkbox ul{list-style:none!important;margin:0!important;padding:0!important}',
+                  '.hs-form-checkbox label{display:flex!important;align-items:center!important;gap:8px!important;font-weight:400!important;cursor:pointer}',
+                  '.hs-form-checkbox input[type=checkbox]{width:18px!important;height:18px!important;accent-color:#EE5700!important;margin:0!important}',
+                  '.hs-richtext{font-size:.78rem!important;color:#6B7280!important;line-height:1.5!important;margin-top:8px}',
+                  '.hs-richtext a{color:#EE5700!important}',
+                  '.hs-submit{margin-top:8px}',
+                  '.hs-button{width:100%!important;padding:14px 28px!important;background:#EE5700!important;color:#fff!important;border:none!important;border-radius:8px!important;font-family:"Poppins",system-ui,sans-serif!important;font-weight:600!important;font-size:.95rem!important;cursor:pointer!important;transition:all .3s!important;box-shadow:0 4px 16px rgba(238,87,0,.3)!important}',
+                  '.hs-button:hover{background:#d94e00!important;transform:translateY(-2px)!important;box-shadow:0 6px 24px rgba(238,87,0,.4)!important}',
+                  '.hs-error-msgs{list-style:none!important;padding:0!important;margin:4px 0 0!important}',
+                  '.hs-error-msgs li label{color:#EF4444!important;font-size:.78rem!important;font-weight:400!important}',
+                  '.hs_recaptcha{margin-top:8px}',
+                  '.fn-date-picker .pika-single{font-family:inherit!important}'
+                ].join('');
+                iframe.contentDocument.head.appendChild(style);
+              }
+              /* Also ensure iframe takes full width */
+              if(iframe){
+                iframe.style.width='100%';
+                iframe.style.minHeight='500px';
+              }
+            }
           });
         });
       </script>
