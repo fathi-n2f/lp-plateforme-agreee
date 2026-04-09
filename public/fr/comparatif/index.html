@@ -142,7 +142,7 @@ a{color:inherit;text-decoration:none}
 @media(max-width:600px){.landscape-grid{grid-template-columns:1fr}}
 
 /* === COMPARISON TABLE === */
-.comparison{padding:80px 0 80px;background:linear-gradient(180deg,#fff 0%,var(--gray-50) 100%);overflow:hidden}
+.comparison{padding:80px 0 80px;background:linear-gradient(180deg,#fff 0%,var(--gray-50) 100%)}
 .comparison-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;margin-top:32px;border-radius:var(--radius-xl);box-shadow:0 8px 40px rgba(0,0,0,.1);border:1px solid var(--gray-200);max-width:100%}
 .comparison-table{width:100%;border-collapse:separate;border-spacing:0;min-width:900px;font-size:.88rem;border-radius:var(--radius-xl);overflow:hidden;box-shadow:none;border:none}
 .comparison-table thead th{background:var(--dark);color:#fff;padding:18px 14px;font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;text-align:center;white-space:nowrap}
@@ -164,9 +164,13 @@ a{color:inherit;text-decoration:none}
 .comparison-table .status-neutral{color:var(--gray-400);font-weight:400;font-style:italic}
 .comparison-table tbody tr:hover td.col-n2f{background:rgba(238,87,0,.08)}
 .comparison-scroll-hint{display:none;text-align:center;font-size:.85rem;font-weight:600;color:var(--orange);margin-top:16px;animation:hintPulse 2s ease-in-out 3}
+.comparison-scroll-container{position:relative}
+.comparison-scroll-container::after{content:'';position:absolute;top:0;right:0;bottom:0;width:40px;background:linear-gradient(90deg,transparent,rgba(249,250,251,.95));pointer-events:none;border-radius:0 var(--radius-xl) var(--radius-xl) 0;z-index:3;opacity:1;transition:opacity .3s}
+.comparison-scroll-container.scrolled-end::after{opacity:0}
 @keyframes hintPulse{0%,100%{opacity:1}50%{opacity:.4}}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
 @media(max-width:900px){.comparison-scroll-hint{display:block}}
+@media(min-width:901px){.comparison-scroll-container::after{display:none}}
 
 /* === WHY N2F / DIFFERENTIATORS === */
 .why-n2f{padding:100px 0;background:var(--gray-50);position:relative;overflow:hidden}
@@ -565,6 +569,7 @@ a{color:inherit;text-decoration:none}
   <h2 class="section-title text-center">Ce que chaque solution fait, et ne fait pas</h2>
   <p class="section-sub text-center mx-auto">12 critères que les DAF vérifient avant de choisir. Données constatées en 2026.</p>
   <div class="section-divider"></div>
+  <div class="comparison-scroll-container">
   <div class="comparison-wrapper fade-in">
     <table class="comparison-table">
       <thead>
@@ -693,6 +698,7 @@ a{color:inherit;text-decoration:none}
         </tr>
       </tbody>
     </table>
+  </div>
   </div>
   <p class="comparison-scroll-hint">&#8592; Faites défiler le tableau &#8594;</p>
   <p class="cost-note" style="margin-top:8px">Tarifs indicatifs 2026. Les ERP passent par des intégrateurs dont les tarifs varient. Esker, Basware et SAP Concur ciblent les ETI-GE (budgets supérieurs, non inclus ici).</p>
@@ -1123,6 +1129,11 @@ window.addEventListener('scroll',function(){var st=window.scrollY,dh=document.do
 /* Back to top */
 var bt=document.getElementById('back-top');
 if(bt){window.addEventListener('scroll',function(){bt.classList.toggle('visible',window.scrollY>800)},{passive:true});bt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})})}
+
+/* Comparison table scroll fade */
+var cw=document.querySelector('.comparison-wrapper');
+var cs=document.querySelector('.comparison-scroll-container');
+if(cw&&cs){cw.addEventListener('scroll',function(){var atEnd=cw.scrollLeft+cw.clientWidth>=cw.scrollWidth-10;cs.classList.toggle('scrolled-end',atEnd)},{passive:true})}
 
 /* Exit popup */
 var pop=document.getElementById('exit-popup'),CK='n2f_exit_dismissed';
