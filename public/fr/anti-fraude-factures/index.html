@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -569,18 +570,7 @@ a{color:inherit;text-decoration:none}
   </div>
   <div>
     <div class="form-card">
-      <div id="hubspot-form">
-        <form class="lp-form" onsubmit="event.preventDefault();this.innerHTML='<p style=text-align:center;padding:24px;font-weight:600;color:#22C55E>&#10003; Merci ! Un expert anti-fraude vous contacte sous 24h.</p>'">
-          <input type="text" placeholder="Prénom" required>
-          <input type="text" placeholder="Nom" required>
-          <input type="email" placeholder="Email professionnel" required>
-          <input type="tel" placeholder="Téléphone">
-          <input type="text" placeholder="Entreprise" required>
-          <select required><option value="">Nombre de factures/mois</option><option>Moins de 100</option><option>100 – 500</option><option>500 – 2 000</option><option>Plus de 2 000</option></select>
-          <select><option value="">Enjeu principal</option><option>Fraude IBAN / virement</option><option>Doublons et surpaiements</option><option>Piste d'Audit Fiable</option><option>Conformité réforme 2026</option><option>Contrôle interne global</option></select>
-          <button type="submit" class="btn btn-primary">Recevoir mon score anti-fraude</button>
-        </form>
-      </div>
+      <div id="hubspot-form"></div>
     </div>
     <div class="mini-badges">
       <span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>PA</span>
@@ -655,16 +645,28 @@ function countUp(el,target,dur,prefix,suffix,decimal){var t0=performance.now();(
 var nums=document.querySelectorAll('[data-target]');
 if('IntersectionObserver' in window){var so=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){var el=x.target,t=parseFloat(el.dataset.target);countUp(el,t,2000,el.dataset.prefix||'',el.dataset.suffix||'',el.dataset.decimal==='true');so.unobserve(el)}})},{threshold:.3});nums.forEach(function(el){so.observe(el)})}
 var sc=document.getElementById('sticky-cta'),hero=document.querySelector('.hero');if('IntersectionObserver' in window){new IntersectionObserver(function(e){e.forEach(function(x){sc.classList.toggle('visible',!x.isIntersecting)})},{threshold:0}).observe(hero)}
-/* HubSpot Form */
-var hs=document.createElement('script');
-hs.src='https://js-eu1.hsforms.net/forms/embed/v2.js';
-hs.onload=function(){if(typeof hbspt!=='undefined'){hbspt.forms.create({region:'eu1',portalId:'143258107',formId:'b922ae80-2aba-4e29-a1f5-4301a87b5f67',target:'#hubspot-form',onFormSubmit:function(){if(window.dataLayer){window.dataLayer.push({event:'lp_form_submit',lp_name:'anti-fraude-factures',lp_cta:'demo-gratuite'})}}})}};
-document.body.appendChild(hs);
-function getUTM(p){return new URLSearchParams(window.location.search).get(p)||''}
-window.addEventListener('message',function(event){if(event.data.type==='hsFormCallback'&&event.data.eventName==='onFormReady'){['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(function(p){var v=getUTM(p);if(v){var input=document.querySelector('#hubspot-form input[name="'+p+'"]');if(input)input.value=v}})}});
+
 var pop=document.getElementById('exit-popup'),CK='n2f_exit_dismissed';function gc(n){var m=document.cookie.match(new RegExp('(^| )'+n+'=([^;]+)'));return m?m[2]:null}function sc2(n,v,d){var x=new Date();x.setTime(x.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+x.toUTCString()+';path=/;SameSite=Lax'}
 if(!gc(CK)){document.documentElement.addEventListener('mouseleave',function handler(e){if(e.clientY<=0){pop.showModal();document.documentElement.removeEventListener('mouseleave',handler)}})}
 pop.querySelector('.close-x').addEventListener('click',function(){pop.close();sc2(CK,'1',7)});pop.addEventListener('click',function(e){if(e.target===pop){pop.close();sc2(CK,'1',7)}});document.getElementById('exit-form').addEventListener('submit',function(e){e.preventDefault();pop.close();sc2(CK,'1',30);alert('Merci ! Votre grille anti-fraude arrive par email.')});
+
+/* HubSpot form embed */
+window.addEventListener('DOMContentLoaded',function(){
+  var check=setInterval(function(){
+    if(typeof hbspt!=='undefined'){
+      clearInterval(check);
+      hbspt.forms.create({
+        portalId:'143258107',
+        formId:'b922ae80-2aba-4e29-a1f5-4301a87b5f67',
+        target:'#hubspot-form',
+        onFormSubmitted:function(){
+          window.dataLayer=window.dataLayer||[];
+          window.dataLayer.push({event:'lp_form_submit',lp_name:'anti-fraude-factures',lp_cta:'demo-gratuite'});
+        }
+      });
+    }
+  },200);
+});
 })();
 </script>
 </body>
