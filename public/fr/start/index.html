@@ -333,6 +333,16 @@
       .hero-callout--left { left: -20px; }
       .hero-callout--right { right: -20px; }
     }
+    /* === EXIT POPUP === */
+    .exit-popup{border:none;border-radius:16px;padding:36px;max-width:460px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.15)}
+    .exit-popup::backdrop{background:rgba(0,0,0,.5)}
+    .exit-popup h3{font-size:1.2rem;font-weight:700;margin-bottom:10px}
+    .exit-popup p{font-size:.9rem;color:#6b7280;margin-bottom:18px;line-height:1.6}
+    .exit-popup form{display:flex;gap:8px;margin-bottom:14px}
+    .exit-popup input[type=email]{flex:1;padding:12px 14px;border:2px solid #e5e7eb;border-radius:12px;font-family:inherit;font-size:.88rem}
+    .exit-popup input[type=email]:focus{border-color:var(--accent);outline:none}
+    .exit-popup .secondary-link{display:block;text-align:center;font-size:.82rem;color:var(--accent);margin-top:10px;font-weight:500}
+    .exit-popup .close-x{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#9ca3af}
   </style>
 
   <!-- Schema: Organization -->
@@ -785,7 +795,7 @@
         <div class="form-right">
           <!-- HubSpot form iframe — paste embed code here when pushing to HubSpot -->
           <div id="demo-form" class="form-container">
-            <div class="form-placeholder">[Emplacement du formulaire HubSpot]</div>
+            <div id="hubspot-form"></div>
           </div>
         </div>
       </div>
@@ -829,6 +839,15 @@
       <p>&copy; 2026 N2JSOFT &mdash; <a href="https://www.n2f.com/fr/mentions-legales/" target="_blank" rel="noopener">Mentions légales</a> · <a href="https://www.n2f.com/fr/politique-de-confidentialite/" target="_blank" rel="noopener">Politique de confidentialité</a></p>
     </div>
   </footer>
+
+  <!-- EXIT POPUP -->
+  <dialog class="exit-popup" id="exit-popup">
+  <button class="close-x" aria-label="Fermer">&times;</button>
+  <h3>Préparez votre transition 2026</h3>
+  <p>Recevez notre checklist de conformité gratuite : 12 points à valider avant septembre 2026.</p>
+  <form id="exit-form"><input type="email" placeholder="Votre email professionnel" required aria-label="Email"><button type="submit" class="btn btn-primary" style="padding:12px 20px">Recevoir la checklist</button></form>
+  <a href="https://diagnostic-facturation-electronique.n2f.com/?utm_source=lp&utm_medium=exit-popup&utm_campaign=start" target="_blank" rel="noopener" class="secondary-link">Ou testez notre diagnostic en ligne &rarr;</a>
+  </dialog>
 
   <!-- ======================== STICKY MOBILE CTA ======================== -->
   <div class="sticky-cta" id="stickyCta">
@@ -878,16 +897,21 @@
     })();
   </script>
   <script>
-    function getUTM(p) { return new URLSearchParams(window.location.search).get(p) || ''; }
-    window.addEventListener('message', function(event) {
-      if (event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormSubmitted') {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-          event: 'form_submit', form_name: 'demo_request_lp', form_source: 'lp_plateforme_agreee',
-          utm_source: getUTM('utm_source'), utm_campaign: getUTM('utm_campaign'), utm_term: getUTM('utm_term')
-        });
-      }
-    });
+    (function() {
+      /* HubSpot Form */
+      var hs=document.createElement('script');
+      hs.src='https://js-eu1.hsforms.net/forms/embed/v2.js';
+      hs.onload=function(){if(typeof hbspt!=='undefined'){hbspt.forms.create({region:'eu1',portalId:'143258107',formId:'b922ae80-2aba-4e29-a1f5-4301a87b5f67',target:'#hubspot-form',onFormSubmit:function(){if(window.dataLayer){window.dataLayer.push({event:'lp_form_submit',lp_name:'start',lp_cta:'demo-gratuite'})}}})}};
+      document.body.appendChild(hs);
+      function getUTM(p){return new URLSearchParams(window.location.search).get(p)||''}
+      window.addEventListener('message',function(event){if(event.data.type==='hsFormCallback'&&event.data.eventName==='onFormReady'){['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(function(p){var v=getUTM(p);if(v){var input=document.querySelector('#hubspot-form input[name="'+p+'"]');if(input)input.value=v}})}});
+
+      /* Exit popup */
+      var pop=document.getElementById('exit-popup'),CK='n2f_exit_dismissed';function gc(n){var m=document.cookie.match(new RegExp('(^| )'+n+'=([^;]+)'));return m?m[2]:null}function sc2(n,v,d){var x=new Date();x.setTime(x.getTime()+d*864e5);document.cookie=n+'='+v+';expires='+x.toUTCString()+';path=/;SameSite=Lax'}
+      (function(){var qs=window.location.search;if(qs){var utms=new URLSearchParams(qs);var keep=[];['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(function(k){var v=utms.get(k);if(v)keep.push(k+'='+encodeURIComponent(v))});if(keep.length){var suffix=keep.join('&');pop.querySelectorAll('a.secondary-link').forEach(function(a){var href=a.getAttribute('href');a.setAttribute('href',href+(href.indexOf('?')>-1?'&':'?')+suffix)})}}})();
+      if(!gc(CK)){document.documentElement.addEventListener('mouseleave',function handler(e){if(e.clientY<=0){pop.showModal();document.documentElement.removeEventListener('mouseleave',handler)}})}
+      pop.querySelector('.close-x').addEventListener('click',function(){pop.close();sc2(CK,'1',7)});pop.addEventListener('click',function(e){if(e.target===pop){pop.close();sc2(CK,'1',7)}});document.getElementById('exit-form').addEventListener('submit',function(e){e.preventDefault();pop.close();sc2(CK,'1',30);alert('Merci ! Votre checklist arrive par email.')});
+    })();
   </script>
 </body>
 </html>
