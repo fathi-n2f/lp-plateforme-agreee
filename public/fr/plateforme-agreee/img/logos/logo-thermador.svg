@@ -1,5 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
-  <rect width="200" height="80" rx="8" fill="#fff"/>
-  <text x="100" y="38" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#1a1a2e" letter-spacing="1">THERMADOR</text>
-  <text x="100" y="56" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#666" letter-spacing="2">GROUPE</text>
+  <rect width="200" height="80" rx="4" fill="#fff"/>
+  <!-- Thermador Groupe: corporate wordmark, dark blue, bold condensed -->
+  <text x="100" y="38" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#003366" letter-spacing="2.5" dominant-baseline="central">THERMADOR</text>
+  <text x="100" y="58" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="11" font-weight="400" fill="#003366" letter-spacing="4" dominant-baseline="central">GROUPE</text>
+  <!-- Subtle separator line -->
+  <line x1="55" y1="47" x2="145" y2="47" stroke="#003366" stroke-width="0.6" opacity="0.3"/>
 </svg>

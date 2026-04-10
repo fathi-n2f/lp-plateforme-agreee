@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" fill="none">
-  <rect width="200" height="80" rx="8" fill="#fff"/>
-  <text x="100" y="36" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#1a1a2e" letter-spacing="3">NAOS</text>
-  <text x="100" y="54" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10" font-weight="400" fill="#888" letter-spacing="1">Bioderma | Institut Esthederm</text>
+  <rect width="200" height="80" rx="4" fill="#fff"/>
+  <!-- NAOS wordmark: clean, modern sans-serif, dark charcoal, wide tracking -->
+  <text x="100" y="46" text-anchor="middle" font-family="'Helvetica Neue',Helvetica,Arial,sans-serif" font-size="34" font-weight="300" fill="#1B1B1B" letter-spacing="8" dominant-baseline="central">NAOS</text>
+  <!-- Subtle brand line beneath -->
+  <line x1="65" y1="58" x2="135" y2="58" stroke="#C8C8C8" stroke-width="0.5"/>
 </svg>
