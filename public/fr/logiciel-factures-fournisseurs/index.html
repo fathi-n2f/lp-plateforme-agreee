@@ -317,6 +317,43 @@ a{color:inherit;text-decoration:none}
 .ai-visual img{border-radius:var(--radius-xl);box-shadow:0 12px 48px rgba(0,0,0,.4);max-width:600px;width:100%;margin:0 auto;border:1px solid rgba(255,255,255,.08)}
 @media(max-width:768px){.ai-grid{grid-template-columns:1fr 1fr;gap:12px}.ai-visual{overflow:hidden}.ai-visual img{max-width:100%}}
 @media(max-width:480px){.ai-grid{grid-template-columns:1fr}}
+
+/* === BEFORE / AFTER SECTION === */
+.before-after{padding:80px 0;background:#fff}
+.ba-grid{display:grid;grid-template-columns:1fr auto 1fr;gap:0;max-width:960px;margin:0 auto;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow)}
+.ba-col{padding:32px 28px}
+.ba-col--before{background:var(--gray-50);border-right:1px solid var(--gray-200)}
+.ba-col--after{background:#fff;border-left:3px solid var(--orange)}
+.ba-col h3{font-size:1.1rem;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.ba-col--before h3{color:var(--gray-600)}
+.ba-col--after h3{color:var(--orange)}
+.ba-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;font-size:.88rem;line-height:1.5;border-bottom:1px solid var(--gray-100)}
+.ba-item:last-child{border-bottom:none}
+.ba-col--before .ba-item{color:var(--gray-600)}
+.ba-col--after .ba-item{color:var(--dark)}
+.ba-item svg{flex-shrink:0;width:18px;height:18px;margin-top:2px}
+.ba-col--before .ba-item svg{color:var(--red)}
+.ba-col--after .ba-item svg{color:var(--green)}
+.ba-arrow{display:flex;align-items:center;justify-content:center;background:var(--gray-100);padding:0 16px}
+.ba-arrow svg{width:32px;height:32px;color:var(--orange)}
+@media(max-width:768px){.ba-grid{grid-template-columns:1fr}.ba-col--before{border-right:none;border-bottom:1px solid var(--gray-200)}.ba-col--after{border-left:none;border-top:3px solid var(--orange)}.ba-arrow{padding:12px 0}.ba-arrow svg{transform:rotate(90deg)}}
+
+/* === WHY N2F DIFFERENTIATOR === */
+.diff-section{padding:80px 0;background:var(--gray-50)}
+.diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:960px;margin:0 auto}
+.diff-card{background:#fff;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--gray-200);transition:var(--transition)}
+.diff-card:hover{box-shadow:var(--shadow);border-color:var(--orange);transform:translateY(-3px)}
+.diff-card-img{height:160px;overflow:hidden}
+.diff-card-img img{width:100%;height:100%;object-fit:cover}
+.diff-card-body{padding:20px 24px}
+.diff-card-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--orange);color:#fff;font-size:.8rem;font-weight:700;margin-bottom:8px}
+.diff-card-body h4{font-size:1rem;font-weight:700;margin-bottom:8px;line-height:1.3}
+.diff-card-body p{font-size:.85rem;color:var(--gray-600);line-height:1.6;margin-bottom:10px}
+.vs-note{display:inline-block;font-size:.75rem;font-weight:600;color:var(--orange);background:var(--cream);padding:4px 10px;border-radius:999px}
+@media(max-width:600px){.diff-grid{grid-template-columns:1fr}.diff-card-img{height:120px}}
+
+/* === ROI PRICING LINE === */
+.roi-pricing{text-align:center;font-size:1.05rem;font-weight:600;color:var(--orange);margin-top:12px}
 </style></head>
 <body>
 <!-- Google Tag Manager (noscript) --><!-- End Google Tag Manager (noscript) -->
@@ -344,10 +381,10 @@ a{color:inherit;text-decoration:none}
       <div class="hero-badge" style="margin-bottom:0;background:linear-gradient(135deg,#FFF3EC,#FEE2E2);border-color:var(--dark);color:var(--dark)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg>Plateforme Agréée par l'État</div>
     </div>
     <h1>Le logiciel de factures fournisseurs qui automatise tout votre cycle AP</h1>
-    <p class="hero-sub">OCR intelligent, détection de fraude, workflow d'approbation et export vers +300 ERP. Plateforme Agréée incluse, conforme réforme 2026.</p>
+    <p class="hero-sub">OCR intelligent, détection de fraude, workflow d'approbation et export vers +300 ERP. Plateforme Agréée incluse — déployé en 6 semaines, pas 6 mois.</p>
     <div class="hero-ctas">
       <a href="#demo-form-section" class="btn btn-primary">Demander une démo</a>
-      <a href="https://webikeo.fr/webinar/les-10-reponses-d-une-daf-sur-la-reforme-de-la-facturation-electronique#webinar?utm_source=lp&utm_medium=cta&utm_campaign=logiciel-factures-fournisseurs" target="_blank" rel="noopener" class="btn btn-ghost"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Voir le webinaire DAF</a>
+      <a href="#before-after" class="btn btn-ghost"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>Voir comment ça marche</a>
     </div>
     <p style="margin-top:14px;font-size:.82rem;color:var(--gray-500)">+18 000 entreprises automatisent leurs factures · 4,7/5 sur Trustpilot · ~14 200 €/an d'économies</p>
   </div>
@@ -392,7 +429,7 @@ a{color:inherit;text-decoration:none}
   <div><div class="stat-num" data-target="215000" data-prefix="+">+215 000</div><div class="stat-label">utilisateurs actifs sur N2F</div></div>
   <div><div class="stat-num" data-target="18000" data-prefix="+">+18 000</div><div class="stat-label">entreprises clientes</div></div>
   <div><div class="stat-num" data-target="98" data-suffix="%">98%</div><div class="stat-label">ont gagné du temps sur N2F</div></div>
-  <div><div class="stat-num" data-target="47" data-decimal="true" data-suffix="/5">4,7/5</div><div class="stat-label">note moyenne (Trustpilot)</div></div>
+  <div><div class="stat-num">6 sem.</div><div class="stat-label">déploiement moyen</div></div>
 </div>
 </section>
 
@@ -440,7 +477,7 @@ a{color:inherit;text-decoration:none}
       <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Divergences TVA signalées avant comptabilisation</li>
       <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Conformité vérifiée sur chaque facture</li>
     </ul>
-    <a href="#demo-form-section" class="btn btn-primary">Demander une démo</a>
+    <a href="#demo-form-section" class="btn btn-primary">Voir la détection en action</a>
   </div>
   <div class="feature-visual">
     <img src="img/features/fr-controle-intelligent.png" alt="Contrôle intelligent, alertes TVA, fraude, doublons" width="800" height="600" loading="lazy">
@@ -460,7 +497,7 @@ a{color:inherit;text-decoration:none}
       <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Compatible avec +300 logiciels (Sage, Cegid, SAP, Oracle...)</li>
       <li><svg class="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Plan comptable adapté à votre organisation</li>
     </ul>
-    <a href="#demo-form-section" class="btn btn-primary">Demander une démo</a>
+    <a href="#demo-form-section" class="btn btn-primary">Tester l'export avec mon ERP</a>
   </div>
   <div class="feature-visual">
     <img src="img/lifestyle/fr-n2f-export-comptable.png" alt="Export comptable, comptabilisez en un clic" width="800" height="600" loading="lazy">
@@ -513,7 +550,36 @@ a{color:inherit;text-decoration:none}
     </div>
   </div>
   <div class="ai-visual fade-in"><img src="img/features/fr-controle-de-tva.png" alt="Croisement automatique TVA avec la DGFiP" loading="lazy" width="600" height="450"></div>
-  <div style="text-align:center;margin-top:32px"><a href="#demo-form-section" class="btn btn-primary">Demander une démo</a></div>
+  <div style="text-align:center;margin-top:32px"><a href="#demo-form-section" class="btn btn-primary">Demander une démo IA</a></div>
+</div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="before-after" id="before-after">
+<div class="container">
+  <div class="text-center"><span class="section-eyebrow">Comparaison</span></div>
+  <h2 class="section-title text-center">Avant / Après : le traitement de vos factures fournisseurs</h2>
+  <p class="section-sub text-center mx-auto" style="margin-bottom:32px">Ce qui change concrètement quand vous passez sur N2F</p>
+  <div class="ba-grid fade-in">
+    <div class="ba-col ba-col--before">
+      <h3><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:22px;height:22px;color:var(--red)"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>Sans N2F</h3>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>Factures triées à la main (email, papier, Excel)</div>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>Saisie manuelle, ~12 erreurs/100 factures</div>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>Approbations par email, relances manuelles</div>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>Fraude IBAN détectée... après paiement</div>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>~12 € par facture traitée</div>
+    </div>
+    <div class="ba-arrow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></div>
+    <div class="ba-col ba-col--after">
+      <h3><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:22px;height:22px;color:var(--green)"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Avec N2F</h3>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Centralisation automatique, email dédié</div>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>OCR IA, zéro saisie, -90 % erreurs</div>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Workflow auto, rappels, délégation</div>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>Vérification IBAN temps réel, avant paiement</div>
+      <div class="ba-item"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>~2,50 € par facture, PA incluse</div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:32px"><a href="#demo-form-section" class="btn btn-primary">Calculer mon ROI</a></div>
 </div>
 </section>
 
@@ -524,10 +590,10 @@ a{color:inherit;text-decoration:none}
   <h2 class="section-title text-center">Toutes les fonctionnalités pour gérer vos factures fournisseurs</h2>
   <p class="section-sub text-center mx-auto" style="margin-bottom:32px">Workflow d'approbation, rapprochement bon de commande, suivi budgétaire et intégrations ERP</p>
   <div class="feat-tabs">
-    <button class="feat-tab-btn active" data-ftab="workflow">Workflow d'approbation</button>
-    <button class="feat-tab-btn" data-ftab="purchase">Demande d'achat → Paiement</button>
-    <button class="feat-tab-btn" data-ftab="budget">Suivi budgétaire</button>
-    <button class="feat-tab-btn" data-ftab="integrations">+300 intégrations</button>
+    <button class="feat-tab-btn active" data-ftab="workflow">Approuvez 3× plus vite</button>
+    <button class="feat-tab-btn" data-ftab="purchase">De l'achat au paiement</button>
+    <button class="feat-tab-btn" data-ftab="budget">Gardez le contrôle budgétaire</button>
+    <button class="feat-tab-btn" data-ftab="integrations">Compatible +300 ERP</button>
   </div>
   <div class="feat-panel active" id="ftab-workflow">
     <div>
@@ -601,6 +667,54 @@ a{color:inherit;text-decoration:none}
 </div>
 </section>
 
+<!-- WHY N2F -->
+<section class="diff-section" id="why-n2f">
+<div class="container">
+  <div class="text-center"><span class="section-eyebrow">Pourquoi N2F</span></div>
+  <h2 class="section-title text-center">Parmi 206 Plateformes Agréées, pourquoi choisir N2F ?</h2>
+  <p class="section-sub text-center mx-auto" style="margin-bottom:32px">4 avantages que vous ne trouverez pas ailleurs</p>
+  <div class="diff-grid fade-in">
+    <div class="diff-card">
+      <div class="diff-card-img"><img src="img/features/fr-controle-intelligent.png" alt="Suite unifiée AP + NdF + Cartes" loading="lazy"></div>
+      <div class="diff-card-body">
+        <div class="diff-card-num">1</div>
+        <h4>Suite unifiée AP + NdF + Cartes</h4>
+        <p>Un seul outil pour factures fournisseurs, notes de frais et cartes corporate. Aucun concurrent ne combine les trois.</p>
+        <span class="vs-note">Unique sur le marché français</span>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-card-img"><img src="img/features/fr-integration-comptable.png" alt="Déployé en 6 semaines" loading="lazy"></div>
+      <div class="diff-card-body">
+        <div class="diff-card-num">2</div>
+        <h4>Déployé en 6 semaines, pas 6 mois</h4>
+        <p>Configuration autonome + consultant dédié. Premier export comptable avant la fin du 2e mois.</p>
+        <span class="vs-note">vs 6-12 mois chez les ERP</span>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-card-img"><img src="img/lifestyle/fr-n2f-factures-fournisseurs.png" alt="Tarif transparent" loading="lazy"></div>
+      <div class="diff-card-body">
+        <div class="diff-card-num">3</div>
+        <h4>~2,50 €/facture, PA incluse, zéro surprise</h4>
+        <p>300-340 €/mois pour 200 factures. Implémentation 750-1 500 €. Pas d'intégrateur, pas de frais cachés.</p>
+        <span class="vs-note">-21 % vs Yooz, -51 % vs Yokoy</span>
+      </div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-card-img"><img src="img/features/fr-validation-approbation.png" alt="100% français, ISO 27001" loading="lazy"></div>
+      <div class="diff-card-body">
+        <div class="diff-card-num">4</div>
+        <h4>100 % français, ISO 27001, SecNumCloud</h4>
+        <p>Données hébergées en France. Piste d'Audit Fiable certifiée. Conforme RGPD de A à Z.</p>
+        <span class="vs-note">Support 100 % français, 14 min réponse</span>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:32px"><a href="#demo-form-section" class="btn btn-primary">Comparer N2F à mon outil actuel</a></div>
+</div>
+</section>
+
 <!-- ROI -->
 <section class="roi">
 <div class="container">
@@ -616,15 +730,16 @@ a{color:inherit;text-decoration:none}
     <div class="roi-card"><div class="roi-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg></div><div class="roi-amount" data-target="1200" data-suffix=" €">1 200 €</div><div class="roi-label">Analyse / an</div><span class="roi-pct">Multicritère</span></div>
   </div>
   <div class="roi-total fade-in"><div class="roi-total-num">~14 200 €/an</div><div class="roi-total-label">d'économies constatées</div></div>
+  <p class="roi-pricing">À partir de ~2,50 €/facture — Plateforme Agréée incluse, aucun frais caché</p>
   <p class="roi-note">Base 100 factures/mois · Source : N2F, 2026</p>
-  <div style="text-align:center;margin-top:24px"><a href="#demo-form-section" class="btn btn-primary">Demander une démo</a></div>
+  <div style="text-align:center;margin-top:24px"><a href="#demo-form-section" class="btn btn-primary">Recevoir mon estimation personnalisée</a></div>
 </div>
 </section>
 
 <!-- MID CTA -->
 <section class="mid-cta">
 <div class="container">
-  <h2>18 000 entreprises ont choisi N2F comme logiciel de factures fournisseurs</h2>
+  <h2>Chaque mois sans automatisation vous coûte 12 € par facture. Passez à 2,50 € avec N2F.</h2>
   <div class="actions">
     <a href="#demo-form-section" class="btn btn-white">Rejoignez-les</a>
     <a href="tel:0426785210" class="header-phone"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/></svg><span>04 26 78 52 10</span></a>
@@ -694,9 +809,9 @@ a{color:inherit;text-decoration:none}
   <h2 class="section-title text-center">Ils utilisent N2F pour gérer leurs factures fournisseurs</h2>
   <div class="testimonials-rating"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>&nbsp; 4,7/5 · +5 000 avis vérifiés</div>
   <div class="testi-grid fade-in">
-    <div class="testi-card testi-featured"><img src="img/logos/logo-mr-bricolage-1-300x200.png" alt="Mr.Bricolage" class="testi-logo"><div class="testi-stars" style="color:var(--orange);font-size:.9rem;letter-spacing:2px;margin-bottom:10px">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-quote">Jusqu'à présent, la comptabilité était vue comme un service qui « bloque » le traitement des dépenses. <strong>Avec N2F, la comptabilité est devenue un service en avance</strong>, grâce à une solution intuitive, agréable et facile à utiliser, ce qui a permis de réduire les délais de traitement.</div><div class="testi-author">Grégory Clipet</div><div class="testi-role">Directeur financier</div><div class="testi-company">Mr.Bricolage</div></div>
-    <div class="testi-card"><img src="img/logos/logo-babolat-1-300x200.png" alt="Babolat" class="testi-logo"><div class="testi-stars" style="color:var(--orange);font-size:.9rem;letter-spacing:2px;margin-bottom:10px">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-quote">Notre workflow de validation intègre les managers et les informations validées remontent ensuite de mon côté. <strong>Ce processus est bien plus rapide qu'avant</strong>, tout comme l'intégration des données dans notre logiciel interne et les mises en paiement.</div><div class="testi-author">Claudine Coudene</div><div class="testi-role">Comptable</div><div class="testi-company">Babolat</div></div>
-    <div class="testi-card"><img src="img/logos/logo-naos.svg" alt="NAOS (Bioderma)" class="testi-logo"><div class="testi-stars" style="color:var(--orange);font-size:.9rem;letter-spacing:2px;margin-bottom:10px">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-quote">Nous avons eu un <strong>super retour de la part des utilisateurs</strong> et très peu de questions relatives à l'utilisation, ils sont conquis. Le professionnalisme des consultants N2F constitue un réel atout !</div><div class="testi-author">Sophie Ramel</div><div class="testi-role">Responsable Comptable</div><div class="testi-company">NAOS (Bioderma)</div></div>
+    <div class="testi-card testi-featured"><img src="img/logos/logo-mr-bricolage-1-300x200.png" alt="Mr.Bricolage" class="testi-logo"><div class="testi-stars" style="color:var(--orange);font-size:.9rem;letter-spacing:2px;margin-bottom:10px">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-quote">Déployé en 7 semaines. Jusqu'à présent, la comptabilité était vue comme un service qui « bloque ». <strong>Avec N2F, le temps de traitement a été divisé par 3</strong> grâce à une solution intuitive, agréable et facile à utiliser.</div><div class="testi-author">Grégory Clipet</div><div class="testi-role">Directeur financier</div><div class="testi-company">Mr.Bricolage</div></div>
+    <div class="testi-card"><img src="img/logos/logo-babolat-1-300x200.png" alt="Babolat" class="testi-logo"><div class="testi-stars" style="color:var(--orange);font-size:.9rem;letter-spacing:2px;margin-bottom:10px">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-quote">Notre workflow de validation intègre les managers et les informations validées remontent de mon côté. <strong>Les délais de validation sont passés de 12 à 3 jours</strong>, tout comme l'intégration des données dans notre logiciel interne et les mises en paiement.</div><div class="testi-author">Claudine Coudene</div><div class="testi-role">Comptable</div><div class="testi-company">Babolat</div></div>
+    <div class="testi-card"><img src="img/logos/logo-naos.svg" alt="NAOS (Bioderma)" class="testi-logo"><div class="testi-stars" style="color:var(--orange);font-size:.9rem;letter-spacing:2px;margin-bottom:10px">&#9733;&#9733;&#9733;&#9733;&#9733;</div><div class="testi-quote">Déployé sur 4 entités en 8 semaines. Nous avons eu un <strong>super retour de la part des utilisateurs</strong> et très peu de questions relatives à l'utilisation, ils sont conquis. Le professionnalisme des consultants N2F constitue un réel atout !</div><div class="testi-author">Sophie Ramel</div><div class="testi-role">Responsable Comptable</div><div class="testi-company">NAOS (Bioderma)</div></div>
   </div>
 </div>
 </section>
@@ -769,6 +884,7 @@ a{color:inherit;text-decoration:none}
     <details class="faq-item"><summary>N2F est-il conforme à la réforme de septembre 2026 ?</summary><p>Oui. N2F est Plateforme Agréée depuis juillet 2025. Réception et émission aux formats Factur-X, CII et UBL. Vous êtes conforme dès aujourd'hui, sans surcoût.</p></details>
     <details class="faq-item"><summary>Quels formats de factures fournisseurs sont acceptés ?</summary><p>PDF, JPG, PNG pour l'OCR. Factur-X (hybride), CII et UBL pour la facturation électronique. Import par email dédié, glisser-déposer ou connecteur concentrateur pour les gros volumes.</p></details>
     <details class="faq-item"><summary>Mes données sont-elles sécurisées ?</summary><p>Certifié ISO 27001, conforme RGPD, hébergement SecNumCloud en France. Piste d'Audit Fiable intégrée pour traçabilité complète de chaque facture fournisseur.</p></details>
+    <details class="faq-item"><summary>Combien coûte N2F pour les factures fournisseurs ?</summary><p>À partir de ~300-340 €/mois pour 200 factures (soit ~2,50 €/facture). La Plateforme Agréée est incluse sans surcoût. Implémentation : 750 à 1 500 € selon la complexité, avec consultant dédié. Aucun frais caché, aucun intégrateur requis.</p></details>
   </div>
 </div>
 </section>
@@ -820,7 +936,7 @@ a{color:inherit;text-decoration:none}
 </div>
 
 <!-- SCHEMA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment fonctionne l'OCR de N2F pour les factures fournisseurs ?","acceptedAnswer":{"@type":"Answer","text":"Extraction automatique de tous les champs : montants, dates, fournisseur, TVA et IBAN. Détection de doublons et fraude sans intervention manuelle."}},{"@type":"Question","name":"Quels logiciels comptables et ERP sont compatibles ?","acceptedAnswer":{"@type":"Answer","text":"Plus de 300 : SAP, Sage, Cegid, Oracle NetSuite, Dynamics 365, Quadratus, ACD, EBP, Pennylane."}},{"@type":"Question","name":"N2F remplace-t-il mon ERP ou logiciel comptable ?","acceptedAnswer":{"@type":"Answer","text":"Non. N2F se connecte à votre ERP et complète votre stack. Export des écritures en un clic."}},{"@type":"Question","name":"Comment fonctionne le workflow d'approbation ?","acceptedAnswer":{"@type":"Answer","text":"Circuits de validation personnalisables par fournisseur, montant ou service. Piste d'Audit Fiable intégrée."}},{"@type":"Question","name":"Le logiciel détecte-t-il la fraude aux factures ?","acceptedAnswer":{"@type":"Answer","text":"Oui. 6 modules IA : vérification IBAN, alertes doublons, anomalies TVA, fausses factures, alerting intelligent."}},{"@type":"Question","name":"Combien de temps faut-il pour déployer N2F ?","acceptedAnswer":{"@type":"Answer","text":"3 jours pour une PME, 2 à 4 semaines pour une ETI avec intégration ERP. Consultant dédié inclus."}},{"@type":"Question","name":"N2F est-il conforme à la réforme de septembre 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Plateforme Agréée depuis juillet 2025. Factur-X, CII et UBL. Conforme sans surcoût."}},{"@type":"Question","name":"Quels formats de factures fournisseurs sont acceptés ?","acceptedAnswer":{"@type":"Answer","text":"PDF, JPG, PNG pour l'OCR. Factur-X, CII et UBL pour la facturation électronique."}},{"@type":"Question","name":"Mes données sont-elles sécurisées ?","acceptedAnswer":{"@type":"Answer","text":"ISO 27001, RGPD, SecNumCloud en France, Piste d'Audit Fiable pour traçabilité complète."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Comment fonctionne l'OCR de N2F pour les factures fournisseurs ?","acceptedAnswer":{"@type":"Answer","text":"Extraction automatique de tous les champs : montants, dates, fournisseur, TVA et IBAN. Détection de doublons et fraude sans intervention manuelle."}},{"@type":"Question","name":"Quels logiciels comptables et ERP sont compatibles ?","acceptedAnswer":{"@type":"Answer","text":"Plus de 300 : SAP, Sage, Cegid, Oracle NetSuite, Dynamics 365, Quadratus, ACD, EBP, Pennylane."}},{"@type":"Question","name":"N2F remplace-t-il mon ERP ou logiciel comptable ?","acceptedAnswer":{"@type":"Answer","text":"Non. N2F se connecte à votre ERP et complète votre stack. Export des écritures en un clic."}},{"@type":"Question","name":"Comment fonctionne le workflow d'approbation ?","acceptedAnswer":{"@type":"Answer","text":"Circuits de validation personnalisables par fournisseur, montant ou service. Piste d'Audit Fiable intégrée."}},{"@type":"Question","name":"Le logiciel détecte-t-il la fraude aux factures ?","acceptedAnswer":{"@type":"Answer","text":"Oui. 6 modules IA : vérification IBAN, alertes doublons, anomalies TVA, fausses factures, alerting intelligent."}},{"@type":"Question","name":"Combien de temps faut-il pour déployer N2F ?","acceptedAnswer":{"@type":"Answer","text":"3 jours pour une PME, 2 à 4 semaines pour une ETI avec intégration ERP. Consultant dédié inclus."}},{"@type":"Question","name":"N2F est-il conforme à la réforme de septembre 2026 ?","acceptedAnswer":{"@type":"Answer","text":"Oui. Plateforme Agréée depuis juillet 2025. Factur-X, CII et UBL. Conforme sans surcoût."}},{"@type":"Question","name":"Quels formats de factures fournisseurs sont acceptés ?","acceptedAnswer":{"@type":"Answer","text":"PDF, JPG, PNG pour l'OCR. Factur-X, CII et UBL pour la facturation électronique."}},{"@type":"Question","name":"Mes données sont-elles sécurisées ?","acceptedAnswer":{"@type":"Answer","text":"ISO 27001, RGPD, SecNumCloud en France, Piste d'Audit Fiable pour traçabilité complète."}},{"@type":"Question","name":"Combien coûte N2F pour les factures fournisseurs ?","acceptedAnswer":{"@type":"Answer","text":"À partir de ~300-340 €/mois pour 200 factures (soit ~2,50 €/facture). Plateforme Agréée incluse sans surcoût. Implémentation : 750 à 1 500 €, consultant dédié, aucun frais caché."}}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"N2F","url":"https://www.n2f.com","telephone":"+33426785210","address":{"@type":"PostalAddress","addressLocality":"Lyon","addressCountry":"FR"}}</script>
 
 <!-- JS -->
