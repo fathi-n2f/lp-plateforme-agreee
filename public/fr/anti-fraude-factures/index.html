@@ -13,7 +13,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<script charset="utf-8" type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -686,23 +685,32 @@ if(!gc(CK)){document.documentElement.addEventListener('mouseleave',function hand
 pop.querySelector('.close-x').addEventListener('click',function(){pop.close();sc2(CK,'1',7)});
 pop.addEventListener('click',function(e){if(e.target===pop){pop.close();sc2(CK,'1',7)}});
 
-/* HubSpot form embed */
-window.addEventListener('DOMContentLoaded',function(){
-  var check=setInterval(function(){
-    if(typeof hbspt!=='undefined'){
-      clearInterval(check);
-      hbspt.forms.create({
-        portalId:'143258107',
-        formId:'b922ae80-2aba-4e29-a1f5-4301a87b5f67',
-        target:'#hubspot-form',
-        onFormSubmitted:function(){
-          window.dataLayer=window.dataLayer||[];
-          window.dataLayer.push({event:'lp_form_submit',lp_name:'anti-fraude-factures',lp_cta:'demo-gratuite'});
-        }
-      });
-    }
-  },200);
-});
+})();
+</script>
+<!-- HubSpot Forms SDK (EU region) -->
+<script>
+(function(){
+  var hs=document.createElement('script');
+  hs.src='https://js-eu1.hsforms.net/forms/embed/v2.js';
+  hs.onload=function(){
+    hbspt.forms.create({
+      region:'eu1',
+      portalId:'143258107',
+      formId:'b922ae80-2aba-4e29-a1f5-4301a87b5f67',
+      target:'#hubspot-form',
+      onFormSubmit:function(){
+        if(window.dataLayer){window.dataLayer.push({event:'lp_form_submit',lp_name:'anti-fraude-factures',lp_cta:'demo-gratuite'})}
+      },
+      onFormReady:function(){
+        var params=new URLSearchParams(window.location.search);
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(function(p){
+          var v=params.get(p);
+          if(v){var input=document.querySelector('#hubspot-form input[name="'+p+'"]');if(input)input.value=v}
+        });
+      }
+    });
+  };
+  document.body.appendChild(hs);
 })();
 </script>
 </body>
